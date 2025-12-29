@@ -1,0 +1,833 @@
+{
+  "metadata": {},
+  "objects": [
+    {
+      "metadata": null,
+      "name": "Cylinder 1",
+      "parameters": {
+        "Angle": 360.0,
+        "Color": "#808080",
+        "Height": 0.5,
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Radius": 4.75
+      },
+      "shape": "Part::Cylinder",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Box 1",
+      "parameters": {
+        "Color": "#808080",
+        "Height": 0.5,
+        "Length": 0.5,
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            4.5,
+            0.0,
+            0.0
+          ]
+        },
+        "Width": 0.5
+      },
+      "shape": "Part::Box",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cut 1",
+      "parameters": {
+        "Base": "Cylinder 1",
+        "Color": "#808080",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Refine": false,
+        "Tool": "Box 1"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Box 2",
+      "parameters": {
+        "Color": "#808080",
+        "Height": 0.5,
+        "Length": 0.5,
+        "Placement": {
+          "Angle": 24.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            4.110954559391704,
+            1.8303148938411007,
+            0.0
+          ]
+        },
+        "Width": 0.5
+      },
+      "shape": "Part::Box",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cut 2",
+      "parameters": {
+        "Base": "Cut 1",
+        "Color": "#808080",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Refine": false,
+        "Tool": "Box 2"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Box 3",
+      "parameters": {
+        "Color": "#808080",
+        "Height": 0.5,
+        "Length": 0.5,
+        "Placement": {
+          "Angle": 48.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            3.011087728614862,
+            3.3441517146482735,
+            0.0
+          ]
+        },
+        "Width": 0.5
+      },
+      "shape": "Part::Box",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cut 3",
+      "parameters": {
+        "Base": "Cut 2",
+        "Color": "#808080",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Refine": false,
+        "Tool": "Box 3"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Box 4",
+      "parameters": {
+        "Color": "#808080",
+        "Height": 0.5,
+        "Length": 0.5,
+        "Placement": {
+          "Angle": 72.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            1.3905764746872635,
+            4.2797543233281905,
+            0.0
+          ]
+        },
+        "Width": 0.5
+      },
+      "shape": "Part::Box",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cut 4",
+      "parameters": {
+        "Base": "Cut 3",
+        "Color": "#808080",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Refine": false,
+        "Tool": "Box 4"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Box 5",
+      "parameters": {
+        "Color": "#808080",
+        "Height": 0.5,
+        "Length": 0.5,
+        "Placement": {
+          "Angle": 96.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            -0.47037808470444,
+            4.47534852915723,
+            0.0
+          ]
+        },
+        "Width": 0.5
+      },
+      "shape": "Part::Box",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cut 5",
+      "parameters": {
+        "Base": "Cut 4",
+        "Color": "#808080",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Refine": false,
+        "Tool": "Box 5"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Box 6",
+      "parameters": {
+        "Color": "#808080",
+        "Height": 0.5,
+        "Length": 0.5,
+        "Placement": {
+          "Angle": 119.99999999999999,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            -2.249999999999999,
+            3.897114317029974,
+            0.0
+          ]
+        },
+        "Width": 0.5
+      },
+      "shape": "Part::Box",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cut 6",
+      "parameters": {
+        "Base": "Cut 5",
+        "Color": "#808080",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Refine": false,
+        "Tool": "Box 6"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Box 7",
+      "parameters": {
+        "Color": "#808080",
+        "Height": 0.5,
+        "Length": 0.5,
+        "Placement": {
+          "Angle": 144.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            -3.640576474687263,
+            2.6450336353161297,
+            0.0
+          ]
+        },
+        "Width": 0.5
+      },
+      "shape": "Part::Box",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cut 7",
+      "parameters": {
+        "Base": "Cut 6",
+        "Color": "#808080",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Refine": false,
+        "Tool": "Box 7"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Box 8",
+      "parameters": {
+        "Color": "#808080",
+        "Height": 0.5,
+        "Length": 0.5,
+        "Placement": {
+          "Angle": 167.99999999999997,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            -4.401664203302125,
+            0.9356026086799187,
+            0.0
+          ]
+        },
+        "Width": 0.5
+      },
+      "shape": "Part::Box",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cut 8",
+      "parameters": {
+        "Base": "Cut 7",
+        "Color": "#808080",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Refine": false,
+        "Tool": "Box 8"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Box 9",
+      "parameters": {
+        "Color": "#808080",
+        "Height": 0.5,
+        "Length": 0.5,
+        "Placement": {
+          "Angle": 192.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            -4.401664203302126,
+            -0.9356026086799158,
+            0.0
+          ]
+        },
+        "Width": 0.5
+      },
+      "shape": "Part::Box",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cut 9",
+      "parameters": {
+        "Base": "Cut 8",
+        "Color": "#808080",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Refine": false,
+        "Tool": "Box 9"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Box 10",
+      "parameters": {
+        "Color": "#808080",
+        "Height": 0.5,
+        "Length": 0.5,
+        "Placement": {
+          "Angle": 216.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            -3.640576474687264,
+            -2.645033635316129,
+            0.0
+          ]
+        },
+        "Width": 0.5
+      },
+      "shape": "Part::Box",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cut 10",
+      "parameters": {
+        "Base": "Cut 9",
+        "Color": "#808080",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Refine": false,
+        "Tool": "Box 10"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Box 11",
+      "parameters": {
+        "Color": "#808080",
+        "Height": 0.5,
+        "Length": 0.5,
+        "Placement": {
+          "Angle": 239.99999999999997,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            -2.2500000000000018,
+            -3.8971143170299727,
+            0.0
+          ]
+        },
+        "Width": 0.5
+      },
+      "shape": "Part::Box",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cut 11",
+      "parameters": {
+        "Base": "Cut 10",
+        "Color": "#808080",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Refine": false,
+        "Tool": "Box 11"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Box 12",
+      "parameters": {
+        "Color": "#808080",
+        "Height": 0.5,
+        "Length": 0.5,
+        "Placement": {
+          "Angle": 264.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            -0.47037808470444403,
+            -4.4753485291572295,
+            0.0
+          ]
+        },
+        "Width": 0.5
+      },
+      "shape": "Part::Box",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cut 12",
+      "parameters": {
+        "Base": "Cut 11",
+        "Color": "#808080",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Refine": false,
+        "Tool": "Box 12"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Box 13",
+      "parameters": {
+        "Color": "#808080",
+        "Height": 0.5,
+        "Length": 0.5,
+        "Placement": {
+          "Angle": 288.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            1.3905764746872626,
+            -4.279754323328191,
+            0.0
+          ]
+        },
+        "Width": 0.5
+      },
+      "shape": "Part::Box",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cut 13",
+      "parameters": {
+        "Base": "Cut 12",
+        "Color": "#808080",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Refine": false,
+        "Tool": "Box 13"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Box 14",
+      "parameters": {
+        "Color": "#808080",
+        "Height": 0.5,
+        "Length": 0.5,
+        "Placement": {
+          "Angle": 312.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            3.01108772861486,
+            -3.3441517146482758,
+            0.0
+          ]
+        },
+        "Width": 0.5
+      },
+      "shape": "Part::Box",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cut 14",
+      "parameters": {
+        "Base": "Cut 13",
+        "Color": "#808080",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Refine": false,
+        "Tool": "Box 14"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Box 15",
+      "parameters": {
+        "Color": "#808080",
+        "Height": 0.5,
+        "Length": 0.5,
+        "Placement": {
+          "Angle": 335.99999999999994,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            4.110954559391702,
+            -1.8303148938411042,
+            0.0
+          ]
+        },
+        "Width": 0.5
+      },
+      "shape": "Part::Box",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cut 15",
+      "parameters": {
+        "Base": "Cut 14",
+        "Color": "#808080",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Refine": false,
+        "Tool": "Box 15"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cylinder 2",
+      "parameters": {
+        "Angle": 360.0,
+        "Color": "#808080",
+        "Height": 0.5,
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Radius": 1.5
+      },
+      "shape": "Part::Cylinder",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cut 16",
+      "parameters": {
+        "Base": "Cut 15",
+        "Color": "#808080",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Refine": false,
+        "Tool": "Cylinder 2"
+      },
+      "shape": "Part::Cut",
+      "visible": true
+    }
+  ],
+  "options": {},
+  "outputs": {},
+  "schemaVersion": "3.0.0"
+}

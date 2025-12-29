@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "description": "Part::MultiFuse",
+  "title": "IFuse",
+  "required": ["Shapes", "Refine", "Placement"],
+  "additionalProperties": false,
+  "properties": {
+    "Shapes": {
+      "type": "array",
+      "description": "The shapes of the individual elements",
+      "fcType": "App::PropertyLinkList",
+      "items": {
+        "type": "string"
+      }
+    },
+    "Refine": {
+      "type": "boolean",
+      "description": "Refine shape"
+    },
+    "Color": {
+      "type": "string",
+      "description": "The color of the fused object",
+      "default": "#808080"
+    },
+    "Placement": {
+      "$ref": "./placement.json"
+    }
+  }
+}

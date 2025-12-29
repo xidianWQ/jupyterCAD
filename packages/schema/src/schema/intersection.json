@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "description": "Part::MultiCommon",
+  "title": "IIntersection",
+  "required": ["Shapes", "Refine", "Placement"],
+  "additionalProperties": false,
+  "properties": {
+    "Shapes": {
+      "type": "array",
+      "description": "The objects to intersect",
+      "fcType": "App::PropertyLinkList",
+      "items": {
+        "type": "string"
+      }
+    },
+    "Refine": {
+      "type": "boolean",
+      "description": "Refine shape"
+    },
+    "Color": {
+      "type": "string",
+      "description": "The color of the intersection",
+      "default": "#808080"
+    },
+    "Placement": {
+      "$ref": "./placement.json"
+    }
+  }
+}

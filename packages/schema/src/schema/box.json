@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "description": "Part::Box",
+  "title": "IBox",
+  "required": ["Length", "Width", "Height", "Placement"],
+  "additionalProperties": false,
+  "properties": {
+    "Length": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "description": "The length of the box (dX)"
+    },
+    "Width": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "description": "The width of the box (dY)"
+    },
+    "Height": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "description": "The height of the box (dZ)"
+    },
+    "Color": {
+      "type": "string",
+      "description": "The color of the box",
+      "default": "#808080"
+    },
+    "Placement": {
+      "$ref": "./placement.json"
+    }
+  }
+}

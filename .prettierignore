@@ -1,0 +1,10 @@
+node_modules
+**/node_modules
+**/lib
+jupytercad
+**/*.d.ts
+**/*.js
+packages/opencascade/build.yml
+yarn.lock
+*.jcad
+playwright.config.js

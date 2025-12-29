@@ -1,0 +1,37 @@
+{
+  "type": "object",
+  "description": "Part::Cone",
+  "title": "ICone",
+  "required": ["Radius1", "Radius2", "Height", "Angle", "Placement"],
+  "additionalProperties": false,
+  "properties": {
+    "Radius1": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "description": "The bottom radius of the cone"
+    },
+    "Radius2": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "description": "The top radius of the cone"
+    },
+    "Height": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "description": "The height of the cone"
+    },
+    "Angle": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "description": "The angle of the cone"
+    },
+    "Color": {
+      "type": "string",
+      "description": "The color of the cone",
+      "default": "#808080"
+    },
+    "Placement": {
+      "$ref": "./placement.json"
+    }
+  }
+}

@@ -1,0 +1,118 @@
+mainBuild:
+  name: jupytercad.opencascade.js
+  bindings:
+    - symbol: Adaptor2d_Curve2d
+    - symbol: Adaptor3d_Curve
+    - symbol: BRep_Builder
+    - symbol: BRep_Tool
+    - symbol: BRepAdaptor_Curve
+    - symbol: BRepAlgoAPI_Algo
+    - symbol: BRepAlgoAPI_BooleanOperation
+    - symbol: BRepAlgoAPI_BuilderAlgo
+    - symbol: BRepAlgoAPI_Common
+    - symbol: BRepAlgoAPI_Cut
+    - symbol: BRepAlgoAPI_Fuse
+    - symbol: BRepBuilderAPI_Command
+    - symbol: BRepBuilderAPI_Copy
+    - symbol: BRepBuilderAPI_FaceError
+    - symbol: BRepBuilderAPI_MakeEdge
+    - symbol: BRepBuilderAPI_MakeFace
+    - symbol: BRepBuilderAPI_MakeShape
+    - symbol: BRepBuilderAPI_MakeVertex
+    - symbol: BRepBuilderAPI_MakeWire
+    - symbol: BRepBuilderAPI_ModifyShape
+    - symbol: BRepFilletAPI_LocalOperation
+    - symbol: BRepFilletAPI_MakeChamfer
+    - symbol: BRepFilletAPI_MakeFillet
+    - symbol: BRepGProp
+    - symbol: BRepMesh_DiscretRoot
+    - symbol: BRepMesh_IncrementalMesh
+    - symbol: BRepPrimAPI_MakeBox
+    - symbol: BRepPrimAPI_MakeCone
+    - symbol: BRepPrimAPI_MakeCylinder
+    - symbol: BRepPrimAPI_MakeOneAxis
+    - symbol: BRepPrimAPI_MakePrism
+    - symbol: BRepPrimAPI_MakeSphere
+    - symbol: BRepPrimAPI_MakeSweep
+    - symbol: BRepPrimAPI_MakeTorus
+    - symbol: BRepTools
+    - symbol: ChFi3d_FilletShape
+    - symbol: GC_MakeCircle
+    - symbol: GC_MakeSegment
+    - symbol: GC_Root
+    - symbol: GCPnts_TangentialDeflection
+    - symbol: Geom_Circle
+    - symbol: Geom_Conic
+    - symbol: Geom_Curve
+    - symbol: Geom_Geometry
+    - symbol: Geom_TrimmedCurve
+    - symbol: gp_Ax1
+    - symbol: gp_Ax2
+    - symbol: gp_Circ
+    - symbol: gp_Dir
+    - symbol: gp_Lin
+    - symbol: gp_Mat
+    - symbol: gp_Pln
+    - symbol: gp_Pnt
+    - symbol: gp_Trsf
+    - symbol: gp_Vec
+    - symbol: gp_XYZ
+    - symbol: GProp_GProps
+    - symbol: GProp_PrincipalProps
+    - symbol: Handle_Geom_Circle
+    - symbol: Handle_Geom_Curve
+    - symbol: Handle_Geom_TrimmedCurve
+    - symbol: Handle_Poly_Polygon3D
+    - symbol: Handle_Poly_PolygonOnTriangulation
+    - symbol: Handle_Poly_Triangulation
+    - symbol: IFSelect_ReturnStatus
+    - symbol: Message_ProgressRange
+    - symbol: NCollection_BaseList
+    - symbol: NCollection_BaseMap
+    - symbol: Poly_Array1OfTriangle
+    - symbol: Poly_Connect
+    - symbol: Poly_PolygonOnTriangulation
+    - symbol: Poly_Triangle
+    - symbol: Poly_Triangulation
+    - symbol: RWStl
+    - symbol: Standard_Transient
+    - symbol: StdPrs_ToolTriangulatedShape
+    - symbol: STEPControl_Reader
+    - symbol: StlAPI_Writer
+    - symbol: TColgp_Array1OfDir
+    - symbol: TColgp_Array1OfPnt
+    - symbol: TColStd_Array1OfInteger
+    - symbol: TopAbs_Orientation
+    - symbol: TopAbs_ShapeEnum
+    - symbol: TopExp
+    - symbol: TopExp_Explorer
+    - symbol: TopLoc_Location
+    - symbol: TopoDS
+    - symbol: TopoDS_Builder
+    - symbol: TopoDS_Compound
+    - symbol: TopoDS_Edge
+    - symbol: TopoDS_Face
+    - symbol: TopoDS_Iterator
+    - symbol: TopoDS_Shape
+    - symbol: TopoDS_Shell
+    - symbol: TopoDS_Vertex
+    - symbol: TopoDS_Wire
+    - symbol: TopTools_FormatVersion
+    - symbol: TopTools_IndexedDataMapOfShapeListOfShape
+    - symbol: TopTools_IndexedMapOfShape
+    - symbol: TopTools_ListOfShape
+    - symbol: XSControl_Reader
+  emccFlags:
+    - "-flto"
+    - "-fexceptions"
+    - "-O3"
+    - "-sDISABLE_EXCEPTION_CATCHING=1"
+    - "-sEXPORT_ES6=1"
+    - "-sUSE_ES6_IMPORT_META=0"
+    - "-sEXPORTED_RUNTIME_METHODS=['FS']"
+    - "-sINITIAL_MEMORY=15MB"
+    - "-sMAXIMUM_MEMORY=4GB"
+    - "-sALLOW_MEMORY_GROWTH=1"
+    - "-sLLD_REPORT_UNDEFINED"
+    - "--no-entry"
+    - "-sENVIRONMENT='web'"

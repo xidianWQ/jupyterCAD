@@ -1,0 +1,44 @@
+{
+  "type": "object",
+  "description": "Part::Fillet",
+  "title": "IFillet",
+  "required": ["Base", "Edge", "Radius", "Placement"],
+  "additionalProperties": false,
+  "properties": {
+    "Base": {
+      "type": "string",
+      "description": "The name of input object",
+      "fcType": "App::PropertyLink"
+    },
+    "Edge": {
+      "anyOf": [
+        {
+          "type": "number",
+          "minimum": 0,
+          "description": "The edge index"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": 0
+          },
+          "description": "List of edge indices"
+        }
+      ]
+    },
+    "Radius": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "description": "The radius for the fillet"
+    },
+    "Color": {
+      "type": "string",
+      "description": "The color of the fillet",
+      "default": "#808080"
+    },
+    "Placement": {
+      "$ref": "./placement.json"
+    }
+  }
+}

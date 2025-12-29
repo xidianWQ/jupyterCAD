@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "title": "ICylinder",
+  "description": "Part::Cylinder",
+  "required": ["Radius", "Angle", "Height", "Placement"],
+  "additionalProperties": false,
+  "properties": {
+    "Radius": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "description": "Radius of the cylinder"
+    },
+    "Height": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "description": "Height of the cylinder"
+    },
+    "Angle": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "description": "Angle of the cylinder"
+    },
+    "Color": {
+      "type": "string",
+      "description": "The color of the cylinder",
+      "default": "#808080"
+    },
+    "Placement": {
+      "$ref": "./placement.json"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "@jupytercad/opencascade",
+  "version": "3.4.0",
+  "description": "The custom OpenCascade build for JupyterCAD.",
+  "keywords": [
+    "jupyter",
+    "jupyterlab"
+  ],
+  "homepage": "https://github.com/jupytercad/JupyterCAD",
+  "bugs": {
+    "url": "https://github.com/jupytercad/JupyterCAD/issues"
+  },
+  "license": "BSD-3-Clause",
+  "author": {
+    "name": "JupyterCad contributors"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/index.d.ts",
+    "lib/jupytercad.opencascade.js",
+    "lib/jupytercad.opencascade.d.ts",
+    "lib/jupytercad.opencascade.wasm"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jupytercad/JupyterCAD.git"
+  },
+  "scripts": {
+    "build": "tsc && node build_opencascade_wasm.js",
+    "build:prod": "tsc && node build_opencascade_wasm.js",
+    "clean": "rimraf tsconfig.tsbuildinfo lib"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "js-yaml": "^4.1.0",
+    "rimraf": "^3.0.2",
+    "tar": "^7.4.3",
+    "typescript": "^5"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

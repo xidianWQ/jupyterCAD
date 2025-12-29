@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "description": "Part::Any",
+  "title": "IAny",
+  "required": ["Content", "Type"],
+  "additionalProperties": false,
+  "properties": {
+    "Content": {
+      "type": "string",
+      "description": "The string content of the object"
+    },
+    "Type": {
+      "type": "string",
+      "enum": ["brep", "step", "stl"]
+    },
+    "Color": {
+      "type": "string",
+      "description": "The color of the object",
+      "default": "#808080"
+    },
+    "Placement": {
+      "$ref": "./placement.json"
+    }
+  }
+}
