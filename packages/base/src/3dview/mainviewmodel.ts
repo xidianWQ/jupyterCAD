@@ -53,12 +53,12 @@ export class MainViewModel implements IDisposable {
   }
 
   // [新增] 定义导出信号
-  get exportAsGLBSignal(): ISignal<this, { content: ArrayBuffer; name: string }> {
+  get exportAsGLBSignal(): ISignal<this, { content: ArrayBuffer; name: string; thumbnail?: string }> {
     return this._exportAsGLBSignal;
   }
   // [新增] 发射信号的方法
-  emitExportAsGLB(content: ArrayBuffer, name: string): void {
-    this._exportAsGLBSignal.emit({ content, name });
+  emitExportAsGLB(content: ArrayBuffer, name: string, thumbnail?: string): void {
+    this._exportAsGLBSignal.emit({ content, name, thumbnail });
   }
 
   get afterShowSignal(): ISignal<this, null> {
@@ -342,7 +342,7 @@ export class MainViewModel implements IDisposable {
     }
   >(this);
   // [新增] 信号实例
-  private _exportAsGLBSignal = new Signal<this, { content: ArrayBuffer; name: string }>(this);
+  private _exportAsGLBSignal = new Signal<this, { content: ArrayBuffer; name: string; thumbnail?: string }>(this);
   private _afterShowSignal = new Signal<this, null>(this);
   private _workerBusy = new Signal<this, boolean>(this);
   private _isDisposed = false;

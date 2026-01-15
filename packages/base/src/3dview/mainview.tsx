@@ -1949,9 +1949,24 @@ export class MainView extends React.Component<IProps, IStates> {
           hiddenObjects.forEach((obj) => obj.visible = true);
 
           if (exported instanceof ArrayBuffer) {
+            // 临时调整渲染尺寸 (第三个参数 false 表示不改变 Canvas 的 CSS 样式大小，防止页面闪烁)
+            const originalSize = new THREE.Vector2();
+            this._renderer.getSize(originalSize);
+            const scaleFactor = 2;
+
+            this._renderer.setSize(
+              originalSize.x * scaleFactor, 
+              originalSize.y * scaleFactor, 
+              false
+            );
+            
+            // 截取缩略图, 强制渲染一次以确保缓冲区有最新的图像
+            this._renderer.render(this._scene, this._camera);
+            const thumbnail = this._renderer.domElement.toDataURL('image/png');
+
             // 释放信号 (用于保存到后端/本地文件系统)
             const filename = `${new Date().getTime()}.glb`;
-            this._mainViewModel.emitExportAsGLB(exported, filename);
+            this._mainViewModel.emitExportAsGLB(exported, filename, thumbnail);
 
             if (download) { // 根据 download 参数决定是否触发浏览器下载
               downloadGLB(exported, filename);

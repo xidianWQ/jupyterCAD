@@ -15,8 +15,9 @@ export declare class MainViewModel implements IDisposable {
     get exportAsGLBSignal(): ISignal<this, {
         content: ArrayBuffer;
         name: string;
+        thumbnail?: string;
     }>;
-    emitExportAsGLB(content: ArrayBuffer, name: string): void;
+    emitExportAsGLB(content: ArrayBuffer, name: string, thumbnail?: string): void;
     get afterShowSignal(): ISignal<this, null>;
     emitAfterShow(): void;
     get workerBusy(): ISignal<this, boolean>;

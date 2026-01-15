@@ -1,408 +1,408 @@
 {
-    "schemaVersion": "3.0.0",
-    "objects": [
-        {
-            "name": "Engine_Block_Raw",
-            "metadata": null,
-            "visible": false,
-            "shape": "Part::Box",
-            "parameters": {
-                "Placement": {
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "Position": [
-                        -50.0,
-                        -40.0,
-                        0.0
-                    ],
-                    "Angle": 0.0
-                },
-                "Length": 100.0,
-                "Height": 60.0,
-                "Width": 80.0,
-                "Color": "#95A5A6"
-            }
+  "metadata": {},
+  "objects": [
+    {
+      "metadata": null,
+      "name": "Engine_Block_Raw",
+      "parameters": {
+        "Color": "#95A5A6",
+        "Height": 60.0,
+        "Length": 100.0,
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            -50.0,
+            -40.0,
+            0.0
+          ]
         },
-        {
-            "metadata": null,
-            "visible": true,
-            "shape": "Part::Box",
-            "name": "V_Cut_Tool",
-            "parameters": {
-                "Width": 40.0,
-                "Height": 40.0,
-                "Placement": {
-                    "Axis": [
-                        1.0,
-                        0.0,
-                        0.0
-                    ],
-                    "Position": [
-                        -52.5,
-                        -20.0,
-                        60.0
-                    ],
-                    "Angle": 45.0
-                },
-                "Length": 110.0,
-                "Color": "#808080"
-            }
+        "Width": 80.0
+      },
+      "shape": "Part::Box",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "V_Cut_Tool",
+      "parameters": {
+        "Color": "#808080",
+        "Height": 40.0,
+        "Length": 110.0,
+        "Placement": {
+          "Angle": 45.0,
+          "Axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "Position": [
+            -52.5,
+            -20.0,
+            60.0
+          ]
         },
-        {
-            "parameters": {
-                "Placement": {
-                    "Axis": [
-                        1.0,
-                        0.0,
-                        0.0
-                    ],
-                    "Angle": 30.0,
-                    "Position": [
-                        -23.333333333333336,
-                        -15.0,
-                        60.0
-                    ]
-                },
-                "Color": "#808080",
-                "Radius": 6.0,
-                "Height": 75.0,
-                "Angle": 360.0
-            },
-            "name": "Cyl_L_0",
-            "visible": false,
-            "metadata": null,
-            "shape": "Part::Cylinder"
+        "Width": 40.0
+      },
+      "shape": "Part::Box",
+      "visible": true
+    },
+    {
+      "metadata": null,
+      "name": "Cyl_L_0",
+      "parameters": {
+        "Angle": 360.0,
+        "Color": "#808080",
+        "Height": 75.0,
+        "Placement": {
+          "Angle": 30.0,
+          "Axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "Position": [
+            -23.333333333333336,
+            -15.0,
+            60.0
+          ]
         },
-        {
-            "shape": "Part::Cut",
-            "name": "Block_Cut_L_0",
-            "parameters": {
-                "Color": "#95A5A6",
-                "Placement": {
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "Angle": 0.0,
-                    "Position": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ]
-                },
-                "Base": "Engine_Block_Raw",
-                "Tool": "Cyl_L_0",
-                "Refine": false
-            },
-            "visible": false,
-            "metadata": null
+        "Radius": 6.0
+      },
+      "shape": "Part::Cylinder",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Block_Cut_L_0",
+      "parameters": {
+        "Base": "Engine_Block_Raw",
+        "Color": "#95A5A6",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
         },
-        {
-            "visible": false,
-            "parameters": {
-                "Color": "#808080",
-                "Height": 75.0,
-                "Placement": {
-                    "Angle": 30.0,
-                    "Axis": [
-                        1.0,
-                        0.0,
-                        0.0
-                    ],
-                    "Position": [
-                        4.666666666666664,
-                        -15.0,
-                        60.0
-                    ]
-                },
-                "Radius": 6.0,
-                "Angle": 360.0
-            },
-            "shape": "Part::Cylinder",
-            "name": "Cyl_L_1",
-            "metadata": null
+        "Refine": false,
+        "Tool": "Cyl_L_0"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cyl_L_1",
+      "parameters": {
+        "Angle": 360.0,
+        "Color": "#808080",
+        "Height": 75.0,
+        "Placement": {
+          "Angle": 30.0,
+          "Axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "Position": [
+            4.666666666666664,
+            -15.0,
+            60.0
+          ]
         },
-        {
-            "parameters": {
-                "Base": "Block_Cut_L_0",
-                "Placement": {
-                    "Position": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "Angle": 0.0,
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ]
-                },
-                "Color": "#95A5A6",
-                "Tool": "Cyl_L_1",
-                "Refine": false
-            },
-            "visible": false,
-            "name": "Block_Cut_L_1",
-            "metadata": null,
-            "shape": "Part::Cut"
+        "Radius": 6.0
+      },
+      "shape": "Part::Cylinder",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Block_Cut_L_1",
+      "parameters": {
+        "Base": "Block_Cut_L_0",
+        "Color": "#95A5A6",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
         },
-        {
-            "metadata": null,
-            "visible": false,
-            "shape": "Part::Cylinder",
-            "name": "Cyl_L_2",
-            "parameters": {
-                "Radius": 6.0,
-                "Color": "#808080",
-                "Placement": {
-                    "Position": [
-                        32.666666666666664,
-                        -15.0,
-                        60.0
-                    ],
-                    "Angle": 30.0,
-                    "Axis": [
-                        1.0,
-                        0.0,
-                        0.0
-                    ]
-                },
-                "Angle": 360.0,
-                "Height": 75.0
-            }
+        "Refine": false,
+        "Tool": "Cyl_L_1"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cyl_L_2",
+      "parameters": {
+        "Angle": 360.0,
+        "Color": "#808080",
+        "Height": 75.0,
+        "Placement": {
+          "Angle": 30.0,
+          "Axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "Position": [
+            32.666666666666664,
+            -15.0,
+            60.0
+          ]
         },
-        {
-            "visible": false,
-            "shape": "Part::Cut",
-            "name": "Block_Cut_L_2",
-            "metadata": null,
-            "parameters": {
-                "Base": "Block_Cut_L_1",
-                "Tool": "Cyl_L_2",
-                "Color": "#95A5A6",
-                "Placement": {
-                    "Angle": 0.0,
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "Position": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ]
-                },
-                "Refine": false
-            }
+        "Radius": 6.0
+      },
+      "shape": "Part::Cylinder",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Block_Cut_L_2",
+      "parameters": {
+        "Base": "Block_Cut_L_1",
+        "Color": "#95A5A6",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
         },
-        {
-            "name": "Cyl_R_0",
-            "visible": false,
-            "parameters": {
-                "Placement": {
-                    "Axis": [
-                        1.0,
-                        0.0,
-                        0.0
-                    ],
-                    "Angle": -30.0,
-                    "Position": [
-                        -23.333333333333336,
-                        15.0,
-                        60.0
-                    ]
-                },
-                "Height": 75.0,
-                "Angle": 360.0,
-                "Radius": 6.0,
-                "Color": "#808080"
-            },
-            "shape": "Part::Cylinder",
-            "metadata": null
+        "Refine": false,
+        "Tool": "Cyl_L_2"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cyl_R_0",
+      "parameters": {
+        "Angle": 360.0,
+        "Color": "#808080",
+        "Height": 75.0,
+        "Placement": {
+          "Angle": -30.0,
+          "Axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "Position": [
+            -23.333333333333336,
+            15.0,
+            60.0
+          ]
         },
-        {
-            "parameters": {
-                "Refine": false,
-                "Color": "#95A5A6",
-                "Base": "Block_Cut_L_2",
-                "Tool": "Cyl_R_0",
-                "Placement": {
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "Angle": 0.0,
-                    "Position": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ]
-                }
-            },
-            "metadata": null,
-            "name": "Block_Cut_R_0",
-            "visible": false,
-            "shape": "Part::Cut"
+        "Radius": 6.0
+      },
+      "shape": "Part::Cylinder",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Block_Cut_R_0",
+      "parameters": {
+        "Base": "Block_Cut_L_2",
+        "Color": "#95A5A6",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
         },
-        {
-            "shape": "Part::Cylinder",
-            "visible": false,
-            "parameters": {
-                "Height": 75.0,
-                "Color": "#808080",
-                "Radius": 6.0,
-                "Placement": {
-                    "Axis": [
-                        1.0,
-                        0.0,
-                        0.0
-                    ],
-                    "Position": [
-                        4.666666666666664,
-                        15.0,
-                        60.0
-                    ],
-                    "Angle": -30.0
-                },
-                "Angle": 360.0
-            },
-            "name": "Cyl_R_1",
-            "metadata": null
+        "Refine": false,
+        "Tool": "Cyl_R_0"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cyl_R_1",
+      "parameters": {
+        "Angle": 360.0,
+        "Color": "#808080",
+        "Height": 75.0,
+        "Placement": {
+          "Angle": -30.0,
+          "Axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "Position": [
+            4.666666666666664,
+            15.0,
+            60.0
+          ]
         },
-        {
-            "visible": false,
-            "shape": "Part::Cut",
-            "parameters": {
-                "Color": "#95A5A6",
-                "Base": "Block_Cut_R_0",
-                "Tool": "Cyl_R_1",
-                "Placement": {
-                    "Angle": 0.0,
-                    "Position": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ]
-                },
-                "Refine": false
-            },
-            "name": "Block_Cut_R_1",
-            "metadata": null
+        "Radius": 6.0
+      },
+      "shape": "Part::Cylinder",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Block_Cut_R_1",
+      "parameters": {
+        "Base": "Block_Cut_R_0",
+        "Color": "#95A5A6",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
         },
-        {
-            "metadata": null,
-            "shape": "Part::Cylinder",
-            "visible": false,
-            "name": "Cyl_R_2",
-            "parameters": {
-                "Color": "#808080",
-                "Placement": {
-                    "Axis": [
-                        1.0,
-                        0.0,
-                        0.0
-                    ],
-                    "Position": [
-                        32.666666666666664,
-                        15.0,
-                        60.0
-                    ],
-                    "Angle": -30.0
-                },
-                "Height": 75.0,
-                "Angle": 360.0,
-                "Radius": 6.0
-            }
+        "Refine": false,
+        "Tool": "Cyl_R_1"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cyl_R_2",
+      "parameters": {
+        "Angle": 360.0,
+        "Color": "#808080",
+        "Height": 75.0,
+        "Placement": {
+          "Angle": -30.0,
+          "Axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "Position": [
+            32.666666666666664,
+            15.0,
+            60.0
+          ]
         },
-        {
-            "visible": false,
-            "shape": "Part::Cut",
-            "metadata": null,
-            "name": "Block_Cut_R_2",
-            "parameters": {
-                "Base": "Block_Cut_R_1",
-                "Refine": false,
-                "Color": "#95A5A6",
-                "Tool": "Cyl_R_2",
-                "Placement": {
-                    "Position": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "Angle": 0.0
-                }
-            }
+        "Radius": 6.0
+      },
+      "shape": "Part::Cylinder",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Block_Cut_R_2",
+      "parameters": {
+        "Base": "Block_Cut_R_1",
+        "Color": "#95A5A6",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
         },
-        {
-            "shape": "Part::Cylinder",
-            "parameters": {
-                "Placement": {
-                    "Axis": [
-                        0.0,
-                        1.0,
-                        0.0
-                    ],
-                    "Angle": 90.0,
-                    "Position": [
-                        -55.0,
-                        0.0,
-                        15.0
-                    ]
-                },
-                "Angle": 360.0,
-                "Radius": 12.0,
-                "Height": 120.0,
-                "Color": "#808080"
-            },
-            "metadata": null,
-            "visible": false,
-            "name": "Crank_Tunnel"
+        "Refine": false,
+        "Tool": "Cyl_R_2"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Crank_Tunnel",
+      "parameters": {
+        "Angle": 360.0,
+        "Color": "#808080",
+        "Height": 120.0,
+        "Placement": {
+          "Angle": 90.0,
+          "Axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "Position": [
+            -55.0,
+            0.0,
+            15.0
+          ]
         },
-        {
-            "name": "V6_Engine_Final",
-            "parameters": {
-                "Color": "#7F8C8D",
-                "Base": "Block_Cut_R_2",
-                "Tool": "Crank_Tunnel",
-                "Refine": false,
-                "Placement": {
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "Position": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "Angle": 0.0
-                }
-            },
-            "shape": "Part::Cut",
-            "metadata": null,
-            "visible": true
-        }
-    ],
-    "options": {},
-    "metadata": {},
-    "outputs": {}
+        "Radius": 12.0
+      },
+      "shape": "Part::Cylinder",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "V6_Engine_Final",
+      "parameters": {
+        "Base": "Block_Cut_R_2",
+        "Color": "#7F8C8D",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Refine": false,
+        "Tool": "Crank_Tunnel"
+      },
+      "shape": "Part::Cut",
+      "visible": true
+    }
+  ],
+  "options": {},
+  "outputs": {},
+  "schemaVersion": "3.0.0"
 }

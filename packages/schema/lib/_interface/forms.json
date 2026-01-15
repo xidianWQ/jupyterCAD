@@ -204,136 +204,6 @@
       }
     }
   },
-  "Part::Box": {
-    "type": "object",
-    "required": [
-      "Length",
-      "Width",
-      "Height",
-      "Placement"
-    ],
-    "additionalProperties": false,
-    "properties": {
-      "Length": {
-        "type": "number",
-        "exclusiveMinimum": 0,
-        "description": "The length of the box (dX)"
-      },
-      "Width": {
-        "type": "number",
-        "exclusiveMinimum": 0,
-        "description": "The width of the box (dY)"
-      },
-      "Height": {
-        "type": "number",
-        "exclusiveMinimum": 0,
-        "description": "The height of the box (dZ)"
-      },
-      "Color": {
-        "type": "string",
-        "description": "The color of the box",
-        "default": "#808080"
-      },
-      "Placement": {
-        "type": "object",
-        "description": "Placement of the object",
-        "additionalProperties": false,
-        "required": [
-          "Position",
-          "Axis",
-          "Angle"
-        ],
-        "properties": {
-          "Position": {
-            "type": "array",
-            "description": "Position",
-            "items": {
-              "type": "number"
-            }
-          },
-          "Axis": {
-            "type": "array",
-            "description": "Rotation Axis",
-            "items": {
-              "type": "number"
-            }
-          },
-          "Angle": {
-            "type": "number",
-            "description": "Rotation Angle (degrees)"
-          }
-        }
-      }
-    }
-  },
-  "Part::Cone": {
-    "type": "object",
-    "required": [
-      "Radius1",
-      "Radius2",
-      "Height",
-      "Angle",
-      "Placement"
-    ],
-    "additionalProperties": false,
-    "properties": {
-      "Radius1": {
-        "type": "number",
-        "exclusiveMinimum": 0,
-        "description": "The bottom radius of the cone"
-      },
-      "Radius2": {
-        "type": "number",
-        "exclusiveMinimum": 0,
-        "description": "The top radius of the cone"
-      },
-      "Height": {
-        "type": "number",
-        "exclusiveMinimum": 0,
-        "description": "The height of the cone"
-      },
-      "Angle": {
-        "type": "number",
-        "exclusiveMinimum": 0,
-        "description": "The angle of the cone"
-      },
-      "Color": {
-        "type": "string",
-        "description": "The color of the cone",
-        "default": "#808080"
-      },
-      "Placement": {
-        "type": "object",
-        "description": "Placement of the object",
-        "additionalProperties": false,
-        "required": [
-          "Position",
-          "Axis",
-          "Angle"
-        ],
-        "properties": {
-          "Position": {
-            "type": "array",
-            "description": "Position",
-            "items": {
-              "type": "number"
-            }
-          },
-          "Axis": {
-            "type": "array",
-            "description": "Rotation Axis",
-            "items": {
-              "type": "number"
-            }
-          },
-          "Angle": {
-            "type": "number",
-            "description": "Rotation Angle (degrees)"
-          }
-        }
-      }
-    }
-  },
   "Part::Cut": {
     "type": "object",
     "required": [
@@ -361,68 +231,6 @@
       "Color": {
         "type": "string",
         "description": "The color of the cut object",
-        "default": "#808080"
-      },
-      "Placement": {
-        "type": "object",
-        "description": "Placement of the object",
-        "additionalProperties": false,
-        "required": [
-          "Position",
-          "Axis",
-          "Angle"
-        ],
-        "properties": {
-          "Position": {
-            "type": "array",
-            "description": "Position",
-            "items": {
-              "type": "number"
-            }
-          },
-          "Axis": {
-            "type": "array",
-            "description": "Rotation Axis",
-            "items": {
-              "type": "number"
-            }
-          },
-          "Angle": {
-            "type": "number",
-            "description": "Rotation Angle (degrees)"
-          }
-        }
-      }
-    }
-  },
-  "Part::Cylinder": {
-    "type": "object",
-    "required": [
-      "Radius",
-      "Angle",
-      "Height",
-      "Placement"
-    ],
-    "additionalProperties": false,
-    "properties": {
-      "Radius": {
-        "type": "number",
-        "exclusiveMinimum": 0,
-        "description": "Radius of the cylinder"
-      },
-      "Height": {
-        "type": "number",
-        "exclusiveMinimum": 0,
-        "description": "Height of the cylinder"
-      },
-      "Angle": {
-        "type": "number",
-        "exclusiveMinimum": 0,
-        "description": "Angle of the cylinder"
-      },
-      "Color": {
-        "type": "string",
-        "description": "The color of the cylinder",
         "default": "#808080"
       },
       "Placement": {
@@ -531,6 +339,209 @@
       }
     }
   },
+  "Part::Cone": {
+    "type": "object",
+    "required": [
+      "Radius1",
+      "Radius2",
+      "Height",
+      "Angle",
+      "Placement"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "Radius1": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "description": "The bottom radius of the cone"
+      },
+      "Radius2": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "description": "The top radius of the cone"
+      },
+      "Height": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "description": "The height of the cone"
+      },
+      "Angle": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "description": "The angle of the cone"
+      },
+      "Color": {
+        "type": "string",
+        "description": "The color of the cone",
+        "default": "#808080"
+      },
+      "Placement": {
+        "type": "object",
+        "description": "Placement of the object",
+        "additionalProperties": false,
+        "required": [
+          "Position",
+          "Axis",
+          "Angle"
+        ],
+        "properties": {
+          "Position": {
+            "type": "array",
+            "description": "Position",
+            "items": {
+              "type": "number"
+            }
+          },
+          "Axis": {
+            "type": "array",
+            "description": "Rotation Axis",
+            "items": {
+              "type": "number"
+            }
+          },
+          "Angle": {
+            "type": "number",
+            "description": "Rotation Angle (degrees)"
+          }
+        }
+      }
+    }
+  },
+  "Part::Cylinder": {
+    "type": "object",
+    "required": [
+      "Radius",
+      "Angle",
+      "Height",
+      "Placement"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "Radius": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "description": "Radius of the cylinder"
+      },
+      "Height": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "description": "Height of the cylinder"
+      },
+      "Angle": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "description": "Angle of the cylinder"
+      },
+      "Color": {
+        "type": "string",
+        "description": "The color of the cylinder",
+        "default": "#808080"
+      },
+      "Placement": {
+        "type": "object",
+        "description": "Placement of the object",
+        "additionalProperties": false,
+        "required": [
+          "Position",
+          "Axis",
+          "Angle"
+        ],
+        "properties": {
+          "Position": {
+            "type": "array",
+            "description": "Position",
+            "items": {
+              "type": "number"
+            }
+          },
+          "Axis": {
+            "type": "array",
+            "description": "Rotation Axis",
+            "items": {
+              "type": "number"
+            }
+          },
+          "Angle": {
+            "type": "number",
+            "description": "Rotation Angle (degrees)"
+          }
+        }
+      }
+    }
+  },
+  "Part::Extrusion": {
+    "type": "object",
+    "required": [
+      "Base",
+      "Dir",
+      "LengthFwd",
+      "LengthRev",
+      "Solid",
+      "Placement"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "Base": {
+        "type": "string",
+        "description": "Shape to extrude",
+        "fcType": "App::PropertyLink"
+      },
+      "Dir": {
+        "type": "array",
+        "description": "Direction of extrusion",
+        "items": {
+          "type": "number"
+        }
+      },
+      "LengthFwd": {
+        "type": "number",
+        "description": "Length of extrusion along the direction"
+      },
+      "LengthRev": {
+        "type": "number",
+        "description": "Length of extrusion against the direction"
+      },
+      "Solid": {
+        "type": "boolean",
+        "description": "If true, creating a solid"
+      },
+      "Color": {
+        "type": "string",
+        "description": "The color of the extrusion",
+        "default": "#808080"
+      },
+      "Placement": {
+        "type": "object",
+        "description": "Placement of the object",
+        "additionalProperties": false,
+        "required": [
+          "Position",
+          "Axis",
+          "Angle"
+        ],
+        "properties": {
+          "Position": {
+            "type": "array",
+            "description": "Position",
+            "items": {
+              "type": "number"
+            }
+          },
+          "Axis": {
+            "type": "array",
+            "description": "Rotation Axis",
+            "items": {
+              "type": "number"
+            }
+          },
+          "Angle": {
+            "type": "number",
+            "description": "Rotation Angle (degrees)"
+          }
+        }
+      }
+    }
+  },
   "Part::Fillet": {
     "type": "object",
     "required": [
@@ -605,45 +616,34 @@
       }
     }
   },
-  "Part::Extrusion": {
+  "Part::Box": {
     "type": "object",
     "required": [
-      "Base",
-      "Dir",
-      "LengthFwd",
-      "LengthRev",
-      "Solid",
+      "Length",
+      "Width",
+      "Height",
       "Placement"
     ],
     "additionalProperties": false,
     "properties": {
-      "Base": {
-        "type": "string",
-        "description": "Shape to extrude",
-        "fcType": "App::PropertyLink"
-      },
-      "Dir": {
-        "type": "array",
-        "description": "Direction of extrusion",
-        "items": {
-          "type": "number"
-        }
-      },
-      "LengthFwd": {
+      "Length": {
         "type": "number",
-        "description": "Length of extrusion along the direction"
+        "exclusiveMinimum": 0,
+        "description": "The length of the box (dX)"
       },
-      "LengthRev": {
+      "Width": {
         "type": "number",
-        "description": "Length of extrusion against the direction"
+        "exclusiveMinimum": 0,
+        "description": "The width of the box (dY)"
       },
-      "Solid": {
-        "type": "boolean",
-        "description": "If true, creating a solid"
+      "Height": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "description": "The height of the box (dZ)"
       },
       "Color": {
         "type": "string",
-        "description": "The color of the extrusion",
+        "description": "The color of the box",
         "default": "#808080"
       },
       "Placement": {
@@ -760,6 +760,142 @@
       "Color": {
         "type": "string",
         "description": "The color of the intersection",
+        "default": "#808080"
+      },
+      "Placement": {
+        "type": "object",
+        "description": "Placement of the object",
+        "additionalProperties": false,
+        "required": [
+          "Position",
+          "Axis",
+          "Angle"
+        ],
+        "properties": {
+          "Position": {
+            "type": "array",
+            "description": "Position",
+            "items": {
+              "type": "number"
+            }
+          },
+          "Axis": {
+            "type": "array",
+            "description": "Rotation Axis",
+            "items": {
+              "type": "number"
+            }
+          },
+          "Angle": {
+            "type": "number",
+            "description": "Rotation Angle (degrees)"
+          }
+        }
+      }
+    }
+  },
+  "Part::Sphere": {
+    "type": "object",
+    "required": [
+      "Radius",
+      "Angle1",
+      "Angle2",
+      "Angle3",
+      "Placement"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "Radius": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "description": "The radius of the sphere"
+      },
+      "Angle1": {
+        "type": "number",
+        "description": "First angle defining a spherical segment"
+      },
+      "Angle2": {
+        "type": "number",
+        "description": "Second angle defining a spherical segment"
+      },
+      "Angle3": {
+        "type": "number",
+        "description": "The angle between the radii lying within the bounding semidisks"
+      },
+      "Color": {
+        "type": "string",
+        "description": "The color of the sphere",
+        "default": "#808080"
+      },
+      "Placement": {
+        "type": "object",
+        "description": "Placement of the object",
+        "additionalProperties": false,
+        "required": [
+          "Position",
+          "Axis",
+          "Angle"
+        ],
+        "properties": {
+          "Position": {
+            "type": "array",
+            "description": "Position",
+            "items": {
+              "type": "number"
+            }
+          },
+          "Axis": {
+            "type": "array",
+            "description": "Rotation Axis",
+            "items": {
+              "type": "number"
+            }
+          },
+          "Angle": {
+            "type": "number",
+            "description": "Rotation Angle (degrees)"
+          }
+        }
+      }
+    }
+  },
+  "Part::Torus": {
+    "type": "object",
+    "required": [
+      "Radius1",
+      "Radius2",
+      "Angle1",
+      "Angle2",
+      "Angle3",
+      "Placement"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "Radius1": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "description": "The distance from the center of the pipe to the center of the torus"
+      },
+      "Radius2": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "description": "The radius of the pipe"
+      },
+      "Angle1": {
+        "type": "number",
+        "description": "First angle to create a torus ring segment"
+      },
+      "Angle2": {
+        "type": "number",
+        "description": "Second angle to create a torus ring segment"
+      },
+      "Angle3": {
+        "type": "number",
+        "description": "Angle to create a torus pipe segment"
+      },
+      "Color": {
+        "type": "string",
+        "description": "The color of the torus",
         "default": "#808080"
       },
       "Placement": {
@@ -944,142 +1080,6 @@
       "Color": {
         "type": "string",
         "description": "The color of the sketch object",
-        "default": "#808080"
-      },
-      "Placement": {
-        "type": "object",
-        "description": "Placement of the object",
-        "additionalProperties": false,
-        "required": [
-          "Position",
-          "Axis",
-          "Angle"
-        ],
-        "properties": {
-          "Position": {
-            "type": "array",
-            "description": "Position",
-            "items": {
-              "type": "number"
-            }
-          },
-          "Axis": {
-            "type": "array",
-            "description": "Rotation Axis",
-            "items": {
-              "type": "number"
-            }
-          },
-          "Angle": {
-            "type": "number",
-            "description": "Rotation Angle (degrees)"
-          }
-        }
-      }
-    }
-  },
-  "Part::Sphere": {
-    "type": "object",
-    "required": [
-      "Radius",
-      "Angle1",
-      "Angle2",
-      "Angle3",
-      "Placement"
-    ],
-    "additionalProperties": false,
-    "properties": {
-      "Radius": {
-        "type": "number",
-        "exclusiveMinimum": 0,
-        "description": "The radius of the sphere"
-      },
-      "Angle1": {
-        "type": "number",
-        "description": "First angle defining a spherical segment"
-      },
-      "Angle2": {
-        "type": "number",
-        "description": "Second angle defining a spherical segment"
-      },
-      "Angle3": {
-        "type": "number",
-        "description": "The angle between the radii lying within the bounding semidisks"
-      },
-      "Color": {
-        "type": "string",
-        "description": "The color of the sphere",
-        "default": "#808080"
-      },
-      "Placement": {
-        "type": "object",
-        "description": "Placement of the object",
-        "additionalProperties": false,
-        "required": [
-          "Position",
-          "Axis",
-          "Angle"
-        ],
-        "properties": {
-          "Position": {
-            "type": "array",
-            "description": "Position",
-            "items": {
-              "type": "number"
-            }
-          },
-          "Axis": {
-            "type": "array",
-            "description": "Rotation Axis",
-            "items": {
-              "type": "number"
-            }
-          },
-          "Angle": {
-            "type": "number",
-            "description": "Rotation Angle (degrees)"
-          }
-        }
-      }
-    }
-  },
-  "Part::Torus": {
-    "type": "object",
-    "required": [
-      "Radius1",
-      "Radius2",
-      "Angle1",
-      "Angle2",
-      "Angle3",
-      "Placement"
-    ],
-    "additionalProperties": false,
-    "properties": {
-      "Radius1": {
-        "type": "number",
-        "exclusiveMinimum": 0,
-        "description": "The distance from the center of the pipe to the center of the torus"
-      },
-      "Radius2": {
-        "type": "number",
-        "exclusiveMinimum": 0,
-        "description": "The radius of the pipe"
-      },
-      "Angle1": {
-        "type": "number",
-        "description": "First angle to create a torus ring segment"
-      },
-      "Angle2": {
-        "type": "number",
-        "description": "Second angle to create a torus ring segment"
-      },
-      "Angle3": {
-        "type": "number",
-        "description": "Angle to create a torus pipe segment"
-      },
-      "Color": {
-        "type": "string",
-        "description": "The color of the torus",
         "default": "#808080"
       },
       "Placement": {

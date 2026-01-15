@@ -226,6 +226,26 @@ export function addCommands(app, tracker, translator, formSchemaRegistry, worker
     addShapeCreationCommands({ tracker, commands, trans });
     addShapeOperationCommands({ tracker, commands, trans });
     addDocumentActionCommands({ tracker, commands, trans });
+    // 新增：检查本地目录是否存在的函数
+    const ensureDirectoryExists = async (path) => {
+        var _a;
+        try {
+            await app.serviceManager.contents.get(path, { content: false });
+        }
+        catch (error) {
+            if (((_a = error.response) === null || _a === void 0 ? void 0 : _a.status) === 404) {
+                await app.serviceManager.contents.save(path, { type: 'directory' });
+            }
+            else {
+                throw error;
+            }
+        }
+    };
+    // 新增：将文件保存在本地目录的函数
+    const saveFile = async (path, content, format = 'base64') => {
+        await app.serviceManager.contents.save(path, { type: 'file', format, content });
+        console.log(`Saved successfully: ${path}`);
+    };
     // 新增：定义一个通用的连接函数
     const connectExportSignal = (widget, source) => {
         // 1. 获取 Panel
@@ -243,44 +263,27 @@ export function addCommands(app, tracker, translator, formSchemaRegistry, worker
             return false;
         }
         // 4. 绑定信号
-        // console.log(`[Command] Connecting export signal for ${widget.id} (Source: ${source})`);
         viewModel.exportAsGLBSignal.connect(async (sender, args) => {
-            const { content } = args;
+            const { content, thumbnail } = args;
             try {
-                // console.log(`[Command] RECEIVED GLB DATA! Name: ${name}, Bytes: ${content.byteLength}`);
-                const base64Content = arrayBufferToBase64(content);
                 const docPath = widget.model.filePath;
                 const currentDir = PathExt.dirname(docPath);
-                const targetDir = PathExt.join(currentDir, 'converted');
-                try {
-                    // 尝试获取该目录信息
-                    await app.serviceManager.contents.get(targetDir, { content: false });
-                }
-                catch (error) {
-                    // 如果报错是 404 (Not Found)，说明目录不存在，需要创建
-                    if (error.response && error.response.status === 404) {
-                        await app.serviceManager.contents.save(targetDir, {
-                            type: 'directory'
-                        });
-                    }
-                    else {
-                        // 如果是其他错误（如权限问题），则向上抛出
-                        throw error;
-                    }
-                }
                 const basename = PathExt.basename(docPath, PathExt.extname(docPath));
-                const filename = `${basename}.glb`;
-                const targetPath = PathExt.join(targetDir, filename);
-                await app.serviceManager.contents.save(targetPath, {
-                    type: 'file',
-                    format: 'base64',
-                    content: base64Content
-                });
-                console.log(`GLB File saved successfully to: ${targetPath}`);
-                // showErrorMessage('Export Success', `Saved to ${targetPath}`);
+                const glbDir = PathExt.join(currentDir, 'converted');
+                const imageDir = PathExt.join(currentDir, 'thumbnails');
+                // 并行检查/创建目录
+                await Promise.all([ensureDirectoryExists(glbDir), ensureDirectoryExists(imageDir)]);
+                // 保存 GLB
+                const glbPath = PathExt.join(glbDir, `${basename}.glb`);
+                await saveFile(glbPath, arrayBufferToBase64(content));
+                // 保存缩略图 (如果存在)
+                if (thumbnail) {
+                    const imagePath = PathExt.join(imageDir, `${basename}.png`);
+                    await saveFile(imagePath, thumbnail.split(',')[1]);
+                }
             }
             catch (error) {
-                console.error('Failed to save GLB:', error);
+                console.error('Failed to save GLB file and its thumbnail:', error);
             }
         });
         // 标记为已绑定

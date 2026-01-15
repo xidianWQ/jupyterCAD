@@ -32,8 +32,8 @@ export class MainViewModel {
         return this._exportAsGLBSignal;
     }
     // [新增] 发射信号的方法
-    emitExportAsGLB(content, name) {
-        this._exportAsGLBSignal.emit({ content, name });
+    emitExportAsGLB(content, name, thumbnail) {
+        this._exportAsGLBSignal.emit({ content, name, thumbnail });
     }
     get afterShowSignal() {
         return this._afterShowSignal;

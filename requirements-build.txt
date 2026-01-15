@@ -7,3 +7,6 @@ jupyter-docprovider>=2,<3
 jupyter-server-ydoc>=2,<3
 jupyterlab>=4.3,<5
 pydantic>=2,<3
+pyvista
+selenium
+webdriver-manager

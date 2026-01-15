@@ -278,8 +278,27 @@ export function addCommands(
   addShapeCreationCommands({ tracker, commands, trans });
   addShapeOperationCommands({ tracker, commands, trans });
   addDocumentActionCommands({ tracker, commands, trans });
-  
-  // 新增：定义一个通用的连接函数
+
+// 新增：检查本地目录是否存在的函数
+const ensureDirectoryExists = async (path: string) => {
+  try {
+    await app.serviceManager.contents.get(path, { content: false });
+  } catch (error: any) {
+    if (error.response?.status === 404) {
+      await app.serviceManager.contents.save(path, { type: 'directory' });
+    } else {
+      throw error;
+    }
+  }
+};
+
+// 新增：将文件保存在本地目录的函数
+const saveFile = async (path: string, content: string, format: 'base64' | 'text' = 'base64') => {
+  await app.serviceManager.contents.save(path, { type: 'file', format, content });
+  console.log(`Saved successfully: ${path}`);
+};
+
+// 新增：定义一个通用的连接函数
 const connectExportSignal = (widget: JupyterCadWidget, source: string) => {
     // 1. 获取 Panel
     const panel = widget.content as any;
@@ -300,48 +319,32 @@ const connectExportSignal = (widget: JupyterCadWidget, source: string) => {
     }
 
     // 4. 绑定信号
-    // console.log(`[Command] Connecting export signal for ${widget.id} (Source: ${source})`);
-    
-    viewModel.exportAsGLBSignal.connect(async (sender: any, args: { content: ArrayBuffer; name: string }) => {
-        const { content } = args;
-        try {
-          // console.log(`[Command] RECEIVED GLB DATA! Name: ${name}, Bytes: ${content.byteLength}`);
-          const base64Content = arrayBufferToBase64(content);
-          
-          const docPath = widget.model.filePath;
-          const currentDir = PathExt.dirname(docPath);
-          const targetDir = PathExt.join(currentDir, 'converted');
+    viewModel.exportAsGLBSignal.connect(async (sender: any, args: { content: ArrayBuffer; name: string; thumbnail?: string }) => {
+      const { content, thumbnail } = args;
+      try {
+        const docPath = widget.model.filePath;
+        const currentDir = PathExt.dirname(docPath);
+        const basename = PathExt.basename(docPath, PathExt.extname(docPath));
 
-          try {
-            // 尝试获取该目录信息
-            await app.serviceManager.contents.get(targetDir, { content: false });
-          } catch (error: any) {
-            // 如果报错是 404 (Not Found)，说明目录不存在，需要创建
-            if (error.response && error.response.status === 404) {
-                await app.serviceManager.contents.save(targetDir, {
-                    type: 'directory'
-                });
-            } else {
-                // 如果是其他错误（如权限问题），则向上抛出
-                throw error;
-            }
-          }
+        const glbDir = PathExt.join(currentDir, 'converted');
+        const imageDir = PathExt.join(currentDir, 'thumbnails');
 
-          const basename = PathExt.basename(docPath, PathExt.extname(docPath));
-          const filename = `${basename}.glb`;
-          const targetPath = PathExt.join(targetDir, filename);
+        // 并行检查/创建目录
+        await Promise.all([ensureDirectoryExists(glbDir), ensureDirectoryExists(imageDir)]);
 
-          await app.serviceManager.contents.save(targetPath, {
-            type: 'file',
-            format: 'base64',
-            content: base64Content
-          });
+        // 保存 GLB
+        const glbPath = PathExt.join(glbDir, `${basename}.glb`);
+        await saveFile(glbPath, arrayBufferToBase64(content));
 
-          console.log(`GLB File saved successfully to: ${targetPath}`);
-          // showErrorMessage('Export Success', `Saved to ${targetPath}`);
-        } catch (error) {
-          console.error('Failed to save GLB:', error);
+        // 保存缩略图 (如果存在)
+        if (thumbnail) {
+          const imagePath = PathExt.join(imageDir, `${basename}.png`);
+          await saveFile(imagePath, thumbnail.split(',')[1]);
         }
+
+      } catch (error) {
+        console.error('Failed to save GLB file and its thumbnail:', error);
+      }
     });
 
     // 标记为已绑定

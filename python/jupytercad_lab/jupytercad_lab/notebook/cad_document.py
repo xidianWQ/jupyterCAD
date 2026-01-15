@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 import sys
 import json
 import logging
@@ -13,6 +14,7 @@ from pydantic import BaseModel
 from ypywidgets.comm import CommWidget
 
 from uuid import uuid4
+from .converter import generate_model_thumbnail
 
 from jupytercad_core.schema import (
     IBox,
@@ -185,6 +187,9 @@ class CadDocument(CommWidget):
             # Pass all required arguments for modern pythonocc
             writer.Perform(doc, TColStd_IndexedDataMapOfStringString(), Message_ProgressRange())
             logger.info(f"Successfully exported GLB to {path}")
+            
+            thumbnail_path = os.path.splitext(path.replace("converted", "thumbnails"))[0] + ".png"
+            generate_model_thumbnail(path, thumbnail_path)
         else:
             logger.warning("No visible shapes to export.")
 
