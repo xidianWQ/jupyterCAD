@@ -6,4 +6,4 @@ node_modules/
 converted/
 thumbnails/
 operators/
-*models/
+models/
