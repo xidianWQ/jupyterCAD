@@ -8,7 +8,7 @@ def create_empty_jcad():
     return {"schemaVersion": "3.0.0", "objects": [], "options": {}, "metadata": {}, "outputs": {}}
 
 class SemanticParser:
-    def __init__(self, input_dir="operations", output_dir="output_models"):
+    def __init__(self, input_dir="operators", output_dir="models"):
         self.input_dir = input_dir
         self.output_dir = output_dir
         if os.path.exists(output_dir):

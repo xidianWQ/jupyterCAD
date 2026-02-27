@@ -6,7 +6,7 @@ import math
 import shutil
 
 class SemanticCADGenerator:
-    def __init__(self, output_dir="operations"):
+    def __init__(self, output_dir="operators"):
         self.output_dir = output_dir
         self.global_op_count = 0
         
