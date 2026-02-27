@@ -3,3 +3,7 @@
 node_modules/
 .yarn/
 .jupyter_ystore.db
+converted/
+thumbnails/
+operators/
+*models/
