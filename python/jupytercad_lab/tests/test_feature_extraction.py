@@ -58,7 +58,7 @@ class MockJCadObject:
     name: str
     shape: ShapeType
     parameters: MockParameters
-    assemblyFeatures: list = None
+    geometryFeatures: list = None
 
 
 class MockCadDocument:
@@ -407,11 +407,11 @@ class TestHashConsistency:
 
         # Add cached features
         features = extractor._extract_box_features(obj)
-        obj.assemblyFeatures = features
+        obj.geometryFeatures = features
 
         # Get hash
         current_hash = extractor._compute_object_hash(obj)
-        obj.assemblyFeatures[0]['hash'] = current_hash
+        obj.geometryFeatures[0]['hash'] = current_hash
 
         # Extract should return cached features
         result = extractor.extract_object_features("test_box", force_recompute=False)
@@ -424,7 +424,7 @@ class TestHashConsistency:
         obj = mock_document.get_object("test_box")
 
         # Add cached features with wrong hash
-        obj.assemblyFeatures = [{"type": "Feature::Point", "name": "old", "hash": "wrong_hash"}]
+        obj.geometryFeatures = [{"type": "Feature::Point", "name": "old", "hash": "wrong_hash"}]
 
         # Extract should recompute
         result = extractor.extract_object_features("test_box", force_recompute=False)
@@ -459,7 +459,7 @@ class TestExtractAllFeatures:
     def test_force_recompute(self, extractor, mock_document):
         """Force recompute should ignore cached features"""
         obj = mock_document.get_object("test_box")
-        obj.assemblyFeatures = [{"type": "Feature::Point", "name": "old", "hash": "any_hash"}]
+        obj.geometryFeatures = [{"type": "Feature::Point", "name": "old", "hash": "any_hash"}]
 
         results = extractor.extract_all_features(force_recompute=True)
 

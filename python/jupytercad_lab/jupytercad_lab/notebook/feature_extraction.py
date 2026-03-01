@@ -375,7 +375,7 @@ class FeatureExtractionService:
         Extract features for a single object.
 
         Strategy:
-        1. Check if object already has cached assemblyFeatures
+        1. Check if object already has cached geometryFeatures
         2. If basic shape (Box, Cylinder, etc.) → use parameter extraction
         3. If boolean operation (Cut, Fuse) → use BRep analysis
 
@@ -402,15 +402,15 @@ class FeatureExtractionService:
             )
 
         # Check for existing cached features
-        if not force_recompute and hasattr(obj, 'assemblyFeatures') and obj.assemblyFeatures:
+        if not force_recompute and hasattr(obj, 'geometryFeatures') and obj.geometryFeatures:
             # Verify freshness
             current_hash = self._compute_object_hash(obj)
-            cached_hash = obj.assemblyFeatures[0].get('hash', '') if obj.assemblyFeatures else ''
+            cached_hash = obj.geometryFeatures[0].get('hash', '') if obj.geometryFeatures else ''
 
             if current_hash == cached_hash:
                 return FeatureExtractionResult(
                     object_name=obj_name,
-                    features=obj.assemblyFeatures,
+                    features=obj.geometryFeatures,
                     extraction_method=ExtractionMethod.CACHED,
                     hash=current_hash,
                     errors=[]
