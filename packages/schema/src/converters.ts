@@ -3,7 +3,7 @@
  * for DTEditor integration
  */
 
-import { IJCadObject, IAssemblyFeature } from './_interface/jcad';
+import { IJCadObject, IGeometryFeature } from './_interface/jcad';
 
 /**
  * JCAD Placement interface (axis-angle representation)
@@ -119,28 +119,16 @@ export class JCADToAssemblyConverter {
   /**
    * Extract assembly features from a JCAD object
    */
-  static extractFeatures(jcadObject: IJCadObject): IAssemblyFeature[] {
-    // If the object already has assemblyFeatures, use them
-    if (jcadObject.assemblyFeatures && jcadObject.assemblyFeatures.length > 0) {
-      return jcadObject.assemblyFeatures;
+  static extractFeatures(jcadObject: IJCadObject): IGeometryFeature[] {
+    // If the object already has geometryFeatures, use them
+    if (jcadObject.geometryFeatures && jcadObject.geometryFeatures.length > 0) {
+      return jcadObject.geometryFeatures;
     }
 
     // Otherwise, automatically extract features based on shape type
-    const features: IAssemblyFeature[] = [];
+    const features: IGeometryFeature[] = [];
 
     switch (jcadObject.shape) {
-      case 'Part::Cylinder':
-        features.push(this.convertCylinder(jcadObject));
-        break;
-      case 'Part::Sphere':
-        features.push(this.convertSphere(jcadObject));
-        break;
-      case 'Part::Cone':
-        features.push(this.convertCone(jcadObject));
-        break;
-      case 'Part::Torus':
-        features.push(this.convertTorus(jcadObject));
-        break;
       case 'Part::Box':
         features.push(...this.convertBox(jcadObject));
         break;
@@ -153,113 +141,11 @@ export class JCADToAssemblyConverter {
   }
 
   /**
-   * Convert Cylinder to assembly feature
-   *
-   * Mapping:
-   * - position ← Placement.Position
-   * - axis ← Placement.Axis (normalized)
-   * - radius ← Radius
-   * - height ← Height
-   */
-  private static convertCylinder(obj: IJCadObject): IAssemblyFeature {
-    const params = obj.parameters as any;
-    const placement = params.Placement as JCADPlacement;
-
-    return {
-      type: 'Feature::Cylinder',
-      name: `${obj.name}_axis`,
-      position: PlacementConverter.jcadToAssemblyPosition(placement),
-      axis: PlacementConverter.jcadToAssemblyAxis(placement),
-      radius: params.Radius,
-      height: params.Height,
-      metadata: {
-        originalObject: obj.name
-      }
-    };
-  }
-
-  /**
-   * Convert Sphere to assembly feature
-   *
-   * Mapping:
-   * - center ← Placement.Position
-   * - radius ← Radius
-   */
-  private static convertSphere(obj: IJCadObject): IAssemblyFeature {
-    const params = obj.parameters as any;
-    const placement = params.Placement as JCADPlacement;
-
-    return {
-      type: 'Feature::Sphere',
-      name: `${obj.name}_center`,
-      center: PlacementConverter.jcadToAssemblyPosition(placement),
-      radius: params.Radius,
-      metadata: {
-        originalObject: obj.name
-      }
-    };
-  }
-
-  /**
-   * Convert Cone to assembly feature
-   *
-   * Mapping:
-   * - position ← Placement.Position
-   * - axis ← Placement.Axis (normalized)
-   * - radius1 ← Radius1 (bottom radius)
-   * - radius2 ← Radius2 (top radius)
-   * - height ← Height
-   */
-  private static convertCone(obj: IJCadObject): IAssemblyFeature {
-    const params = obj.parameters as any;
-    const placement = params.Placement as JCADPlacement;
-
-    return {
-      type: 'Feature::Cone',
-      name: `${obj.name}_axis`,
-      position: PlacementConverter.jcadToAssemblyPosition(placement),
-      axis: PlacementConverter.jcadToAssemblyAxis(placement),
-      radius1: params.Radius1,
-      radius2: params.Radius2,
-      height: params.Height,
-      metadata: {
-        originalObject: obj.name
-      }
-    };
-  }
-
-  /**
-   * Convert Torus to assembly feature
-   *
-   * Mapping (CRITICAL):
-   * - position ← Placement.Position
-   * - axis ← Placement.Axis (normalized, normal to torus plane)
-   * - radius ← Radius1 (main radius: center to tube center)
-   * - tube ← Radius2 (tube radius)
-   */
-  private static convertTorus(obj: IJCadObject): IAssemblyFeature {
-    const params = obj.parameters as any;
-    const placement = params.Placement as JCADPlacement;
-
-    return {
-      type: 'Feature::Torus',
-      name: `${obj.name}_center`,
-      position: PlacementConverter.jcadToAssemblyPosition(placement),
-      axis: PlacementConverter.jcadToAssemblyAxis(placement),
-      radius: params.Radius1,  // Main radius
-      tube: params.Radius2,     // Tube radius
-      metadata: {
-        originalObject: obj.name
-      }
-    };
-  }
-
-  /**
    * Convert Box to assembly features (extract faces)
    *
    * Returns 6 face features for the 6 faces of the box
    */
-  private static convertBox(obj: IJCadObject): IAssemblyFeature[] {
+  private static convertBox(obj: IJCadObject): IGeometryFeature[] {
     const params = obj.parameters as any;
     const placement = params.Placement as JCADPlacement;
     const [x, y, z] = placement.Position;
@@ -322,164 +208,10 @@ export class AssemblyToJCADConverter {
    * Create a JCAD object from an assembly feature
    */
   static createJCADObject(
-    feature: IAssemblyFeature,
+    feature: IGeometryFeature,
     objectName: string
   ): IJCadObject {
-    switch (feature.type) {
-      case 'Feature::Cylinder':
-        return this.createCylinder(feature, objectName);
-      case 'Feature::Sphere':
-        return this.createSphere(feature, objectName);
-      case 'Feature::Cone':
-        return this.createCone(feature, objectName);
-      case 'Feature::Torus':
-        return this.createTorus(feature, objectName);
-      default:
-        throw new Error(`Unsupported feature type for JCAD creation: ${feature.type}`);
-    }
-  }
-
-  /**
-   * Create Cylinder JCAD object from assembly feature
-   *
-   * Mapping:
-   * - Placement.Position ← position
-   * - Placement.Axis ← axis
-   * - Radius ← radius
-   * - Height ← height
-   */
-  private static createCylinder(
-    feature: IAssemblyFeature,
-    objectName: string
-  ): IJCadObject {
-    if (!feature.position || !feature.axis || !feature.radius || !feature.height) {
-      throw new Error('Missing required cylinder parameters');
-    }
-
-    const placement = PlacementConverter.assemblyPositionAxisToJCADPlacement(
-      feature.position,
-      feature.axis
-    );
-
-    return {
-      name: objectName,
-      visible: true,
-      shape: 'Part::Cylinder',
-      parameters: {
-        Radius: feature.radius,
-        Height: feature.height,
-        Angle: 360,
-        Placement: placement
-      },
-      assemblyFeatures: [feature]
-    };
-  }
-
-  /**
-   * Create Sphere JCAD object from assembly feature
-   *
-   * Mapping:
-   * - Placement.Position ← center
-   * - Radius ← radius
-   */
-  private static createSphere(
-    feature: IAssemblyFeature,
-    objectName: string
-  ): IJCadObject {
-    if (!feature.center || !feature.radius) {
-      throw new Error('Missing required sphere parameters');
-    }
-
-    return {
-      name: objectName,
-      visible: true,
-      shape: 'Part::Sphere',
-      parameters: {
-        Radius: feature.radius,
-        Angle1: 0,
-        Angle2: 180,
-        Angle3: 360,
-        Placement: PlacementConverter.assemblyCenterToJCADPosition(feature.center)
-      },
-      assemblyFeatures: [feature]
-    };
-  }
-
-  /**
-   * Create Cone JCAD object from assembly feature
-   *
-   * Mapping:
-   * - Placement.Position ← position
-   * - Placement.Axis ← axis
-   * - Radius1 ← radius1
-   * - Radius2 ← radius2
-   * - Height ← height
-   */
-  private static createCone(
-    feature: IAssemblyFeature,
-    objectName: string
-  ): IJCadObject {
-    if (!feature.position || !feature.axis ||
-        feature.radius1 === undefined || feature.radius2 === undefined) {
-      throw new Error('Missing required cone parameters');
-    }
-
-    const placement = PlacementConverter.assemblyPositionAxisToJCADPlacement(
-      feature.position,
-      feature.axis
-    );
-
-    return {
-      name: objectName,
-      visible: true,
-      shape: 'Part::Cone',
-      parameters: {
-        Radius1: feature.radius1,
-        Radius2: feature.radius2,
-        Height: feature.height || 10,
-        Angle: 360,
-        Placement: placement
-      },
-      assemblyFeatures: [feature]
-    };
-  }
-
-  /**
-   * Create Torus JCAD object from assembly feature
-   *
-   * Mapping (CRITICAL):
-   * - Placement.Position ← position
-   * - Placement.Axis ← axis
-   * - Radius1 ← radius (main radius)
-   * - Radius2 ← tube (tube radius)
-   */
-  private static createTorus(
-    feature: IAssemblyFeature,
-    objectName: string
-  ): IJCadObject {
-    if (!feature.position || !feature.axis || !feature.radius || !feature.tube) {
-      throw new Error('Missing required torus parameters');
-    }
-
-    const placement = PlacementConverter.assemblyPositionAxisToJCADPlacement(
-      feature.position,
-      feature.axis
-    );
-
-    return {
-      name: objectName,
-      visible: true,
-      shape: 'Part::Torus',
-      parameters: {
-        Radius1: feature.radius,  // Main radius
-        Radius2: feature.tube,    // Tube radius
-        Angle1: 0,
-        Angle2: 360,
-        Angle3: 360,
-        Placement: placement
-      },
-      assemblyFeatures: [feature]
-    };
+    throw new Error(`Unsupported feature type for JCAD creation: ${feature.type}`);
   }
 }
 
@@ -491,13 +223,13 @@ export class GeometryFeatureConverter {
   /**
    * Batch convert JCAD objects to assembly features
    */
-  static jcadBatchToAssembly(jcadObjects: IJCadObject[]): IAssemblyFeature[] {
-    const features: IAssemblyFeature[] = [];
+  static jcadBatchToAssembly(jcadObjects: IJCadObject[]): IGeometryFeature[] {
+    const features: IGeometryFeature[] = [];
 
     for (const obj of jcadObjects) {
-      // If object has assemblyFeatures, use them directly
-      if (obj.assemblyFeatures && obj.assemblyFeatures.length > 0) {
-        features.push(...obj.assemblyFeatures);
+      // If object has geometryFeatures, use them directly
+      if (obj.geometryFeatures && obj.geometryFeatures.length > 0) {
+        features.push(...obj.geometryFeatures);
       } else {
         // Otherwise, automatically extract
         features.push(...JCADToAssemblyConverter.extractFeatures(obj));
@@ -510,7 +242,7 @@ export class GeometryFeatureConverter {
   /**
    * Create JCAD assembly from assembly features
    */
-  static assemblyToJCADAssembly(features: IAssemblyFeature[]): IJCadObject[] {
+  static assemblyToJCADAssembly(features: IGeometryFeature[]): IJCadObject[] {
     const jcadObjects: IJCadObject[] = [];
 
     for (const feature of features) {
@@ -533,12 +265,8 @@ export class GeometryFeatureConverter {
   /**
    * Validate feature completeness
    */
-  static validateFeature(feature: IAssemblyFeature): boolean {
+  static validateFeature(feature: IGeometryFeature): boolean {
     const requiredFields: Record<string, string[]> = {
-      'Feature::Cylinder': ['position', 'axis', 'radius', 'height'],
-      'Feature::Sphere': ['center', 'radius'],
-      'Feature::Cone': ['position', 'axis', 'radius1', 'radius2'],
-      'Feature::Torus': ['position', 'axis', 'radius', 'tube'],
       'Feature::Circle': ['center', 'normal', 'radius'],
       'Feature::Face': ['normal', 'center']
     };
@@ -560,10 +288,6 @@ export class GeometryFeatureConverter {
    */
   static getRequiredFields(featureType: string): string[] {
     const fieldMap: Record<string, string[]> = {
-      'Feature::Cylinder': ['position', 'axis', 'radius', 'height'],
-      'Feature::Sphere': ['center', 'radius'],
-      'Feature::Cone': ['position', 'axis', 'radius1', 'radius2'],
-      'Feature::Torus': ['position', 'axis', 'radius', 'tube'],
       'Feature::Circle': ['center', 'normal', 'radius'],
       'Feature::Face': ['normal', 'center'],
       'Feature::Point': ['position'],
@@ -579,29 +303,5 @@ export class GeometryFeatureConverter {
  * Documents the mapping between JCAD and Assembly parameters
  */
 export const ParameterMapping = {
-  'Feature::Cylinder': {
-    'Assembly.position': 'JCAD.Placement.Position',
-    'Assembly.axis': 'JCAD.Placement.Axis',
-    'Assembly.radius': 'JCAD.Radius',
-    'Assembly.height': 'JCAD.Height'
-  },
-  'Feature::Sphere': {
-    'Assembly.center': 'JCAD.Placement.Position',
-    'Assembly.radius': 'JCAD.Radius'
-    // Angle1/2/3 are ignored for full sphere
-  },
-  'Feature::Cone': {
-    'Assembly.position': 'JCAD.Placement.Position',
-    'Assembly.axis': 'JCAD.Placement.Axis',
-    'Assembly.radius1': 'JCAD.Radius1',
-    'Assembly.radius2': 'JCAD.Radius2',
-    'Assembly.height': 'JCAD.Height'
-  },
-  'Feature::Torus': {
-    'Assembly.position': 'JCAD.Placement.Position',
-    'Assembly.axis': 'JCAD.Placement.Axis',
-    'Assembly.radius': 'JCAD.Radius1',  // CRITICAL: main radius
-    'Assembly.tube': 'JCAD.Radius2'      // CRITICAL: tube radius
-    // Angle1/2/3 are ignored for full torus
-  }
+  // Note: Cylinder, Sphere, Cone, Torus features are not supported for export
 };

@@ -148,8 +148,8 @@ class CadDocument(CommWidget):
                         # Get current object data
                         obj_data = obj_map.to_py()
 
-                        # Add assemblyFeatures to the object
-                        obj_data["assemblyFeatures"] = result.features
+                        # Add geometryFeatures to the object
+                        obj_data["geometryFeatures"] = result.features
 
                         # Update the YMap with modified data
                         for key, value in obj_data.items():

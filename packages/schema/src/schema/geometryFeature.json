@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://jupytercad.org/schemas/assemblyFeature.json",
-  "title": "IAssemblyFeature",
+  "$id": "https://jupytercad.org/schemas/geometryFeature.json",
+  "title": "IGeometryFeature",
   "description": "Unified geometric feature definition for assembly constraints (compatible with DTEditor Assembly Schema)",
   "type": "object",
   "required": ["type", "name"],

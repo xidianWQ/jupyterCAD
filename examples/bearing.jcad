@@ -182,7 +182,7 @@
             "metadata": null,
             "visible": true,
             "shape": "Part::Cut",
-            "assemblyFeatures": [
+            "geometryFeatures": [
                 {
                     "normal": [
                         0.0,
@@ -1074,7 +1074,7 @@
             },
             "visible": true,
             "name": "Inner_Race_Final",
-            "assemblyFeatures": [
+            "geometryFeatures": [
                 {
                     "type": "Feature::Circle",
                     "normal": [
@@ -2267,7 +2267,7 @@
         },
         {
             "name": "Balls_Agg_7",
-            "assemblyFeatures": [
+            "geometryFeatures": [
                 {
                     "hash": "3bc484acff772a793f718156c9f26a46f79463638f14ab43963002601241cc0f",
                     "normal": [

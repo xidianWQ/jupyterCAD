@@ -30,7 +30,7 @@
             "name": "V_Cut_Tool",
             "visible": true,
             "metadata": null,
-            "assemblyFeatures": [
+            "geometryFeatures": [
                 {
                     "name": "V_Cut_Tool_corner_bottom_left_back",
                     "hash": "4fe762de96e9513bf42691a4d29d3d22a45191d87f86bc8321599b1a5880aa8d",
@@ -707,7 +707,7 @@
                 "Base": "Block_Cut_R_2"
             },
             "metadata": null,
-            "assemblyFeatures": [
+            "geometryFeatures": [
                 {
                     "type": "Feature::Circle",
                     "center": [

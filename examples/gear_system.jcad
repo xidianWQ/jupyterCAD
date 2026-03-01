@@ -303,7 +303,7 @@
         },
         {
             "metadata": null,
-            "assemblyFeatures": [
+            "geometryFeatures": [
                 {
                     "center": [
                         0.0,
@@ -1952,7 +1952,7 @@
                 "Base": "Planet_0_Step_6",
                 "Tool": "Planet_0_Cut_7"
             },
-            "assemblyFeatures": [
+            "geometryFeatures": [
                 {
                     "name": "Planet_0_Step_7_arc_1",
                     "start": [
@@ -3945,7 +3945,7 @@
         },
         {
             "name": "Planet_1_Step_7",
-            "assemblyFeatures": [
+            "geometryFeatures": [
                 {
                     "radius": 10.0,
                     "hash": "244e2f13c6e0fb3865850ebb90429adb5536670d906b81635ac672e0af839ace",
@@ -5978,7 +5978,7 @@
                 "Base": "Planet_2_Step_6"
             },
             "metadata": null,
-            "assemblyFeatures": [
+            "geometryFeatures": [
                 {
                     "endAngle": 6.283185307179586,
                     "center": [
@@ -7622,7 +7622,7 @@
         {
             "visible": true,
             "metadata": null,
-            "assemblyFeatures": [
+            "geometryFeatures": [
                 {
                     "name": "Ring_Gear_circle_0",
                     "type": "Feature::Circle",
@@ -8008,7 +8008,7 @@
             "name": "Base_Shaft",
             "metadata": null,
             "shape": "Part::Cylinder",
-            "assemblyFeatures": [
+            "geometryFeatures": [
                 {
                     "hash": "fb2589c10684765ea56f403176759442f34af1f7ba7111cc4c62ff2080880ab4",
                     "metadata": {

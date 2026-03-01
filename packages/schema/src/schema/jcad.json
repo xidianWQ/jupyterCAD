@@ -34,8 +34,8 @@
     }
   },
   "definitions": {
-    "assemblyFeature": {
-      "$ref": "./assemblyFeature.json"
+    "geometryFeature": {
+      "$ref": "./geometryFeature.json"
     },
     "parts": {
       "type": "string",
@@ -120,10 +120,10 @@
             "type": "string"
           }
         },
-        "assemblyFeatures": {
+        "geometryFeatures": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/assemblyFeature"
+            "$ref": "#/definitions/geometryFeature"
           },
           "description": "Assembly features extracted from this object (for DTEditor integration)"
         }

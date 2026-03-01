@@ -68,7 +68,7 @@ export interface IJCadObject {
   /**
    * Assembly features extracted from this object (for DTEditor integration)
    */
-  assemblyFeatures?: IAssemblyFeature[];
+  geometryFeatures?: IGeometryFeature[];
 }
 /**
  * This interface was referenced by `IJCadContent`'s JSON-Schema
@@ -85,23 +85,13 @@ export interface IShapeMetadata {
  * Unified geometric feature definition for assembly constraints (compatible with DTEditor Assembly Schema)
  *
  * This interface was referenced by `IJCadContent`'s JSON-Schema
- * via the `definition` "assemblyFeature".
+ * via the `definition` "geometryFeature".
  */
-export interface IAssemblyFeature {
+export interface IGeometryFeature {
   /**
    * Feature type for assembly constraints
    */
-  type:
-    | "Feature::Cylinder"
-    | "Feature::Sphere"
-    | "Feature::Cone"
-    | "Feature::Torus"
-    | "Feature::Circle"
-    | "Feature::Arc"
-    | "Feature::Face"
-    | "Feature::Plane"
-    | "Feature::Point"
-    | "Feature::Edge";
+  type: "Feature::Circle" | "Feature::Arc" | "Feature::Face" | "Feature::Plane" | "Feature::Point" | "Feature::Edge";
   /**
    * Feature name/identifier
    */

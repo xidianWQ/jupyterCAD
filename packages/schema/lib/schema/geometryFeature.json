@@ -9,7 +9,7 @@
     "properties": {
         "type": {
             "type": "string",
-            "enum": ["Feature::Cylinder", "Feature::Sphere", "Feature::Cone", "Feature::Torus", "Feature::Circle", "Feature::Arc", "Feature::Face", "Feature::Plane", "Feature::Point", "Feature::Edge"],
+            "enum": ["Feature::Circle", "Feature::Arc", "Feature::Face", "Feature::Plane", "Feature::Point", "Feature::Edge"],
             "description": "Feature type for assembly constraints"
         },
         "name": {

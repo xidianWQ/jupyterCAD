@@ -1,2094 +1,2094 @@
 {
-    "schemaVersion": "3.0.0",
-    "objects": [
+  "metadata": {},
+  "objects": [
+    {
+      "metadata": null,
+      "name": "Cylinder 1",
+      "parameters": {
+        "Angle": 360.0,
+        "Color": "#808080",
+        "Height": 0.5,
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Radius": 4.75
+      },
+      "shape": "Part::Cylinder",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Box 1",
+      "parameters": {
+        "Color": "#808080",
+        "Height": 0.5,
+        "Length": 0.5,
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            4.5,
+            0.0,
+            0.0
+          ]
+        },
+        "Width": 0.5
+      },
+      "shape": "Part::Box",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cut 1",
+      "parameters": {
+        "Base": "Cylinder 1",
+        "Color": "#808080",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Refine": false,
+        "Tool": "Box 1"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Box 2",
+      "parameters": {
+        "Color": "#808080",
+        "Height": 0.5,
+        "Length": 0.5,
+        "Placement": {
+          "Angle": 24.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            4.110954559391704,
+            1.8303148938411007,
+            0.0
+          ]
+        },
+        "Width": 0.5
+      },
+      "shape": "Part::Box",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cut 2",
+      "parameters": {
+        "Base": "Cut 1",
+        "Color": "#808080",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Refine": false,
+        "Tool": "Box 2"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Box 3",
+      "parameters": {
+        "Color": "#808080",
+        "Height": 0.5,
+        "Length": 0.5,
+        "Placement": {
+          "Angle": 48.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            3.011087728614862,
+            3.3441517146482735,
+            0.0
+          ]
+        },
+        "Width": 0.5
+      },
+      "shape": "Part::Box",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cut 3",
+      "parameters": {
+        "Base": "Cut 2",
+        "Color": "#808080",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Refine": false,
+        "Tool": "Box 3"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Box 4",
+      "parameters": {
+        "Color": "#808080",
+        "Height": 0.5,
+        "Length": 0.5,
+        "Placement": {
+          "Angle": 72.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            1.3905764746872635,
+            4.2797543233281905,
+            0.0
+          ]
+        },
+        "Width": 0.5
+      },
+      "shape": "Part::Box",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cut 4",
+      "parameters": {
+        "Base": "Cut 3",
+        "Color": "#808080",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Refine": false,
+        "Tool": "Box 4"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Box 5",
+      "parameters": {
+        "Color": "#808080",
+        "Height": 0.5,
+        "Length": 0.5,
+        "Placement": {
+          "Angle": 96.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            -0.47037808470444,
+            4.47534852915723,
+            0.0
+          ]
+        },
+        "Width": 0.5
+      },
+      "shape": "Part::Box",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cut 5",
+      "parameters": {
+        "Base": "Cut 4",
+        "Color": "#808080",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Refine": false,
+        "Tool": "Box 5"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Box 6",
+      "parameters": {
+        "Color": "#808080",
+        "Height": 0.5,
+        "Length": 0.5,
+        "Placement": {
+          "Angle": 119.99999999999999,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            -2.249999999999999,
+            3.897114317029974,
+            0.0
+          ]
+        },
+        "Width": 0.5
+      },
+      "shape": "Part::Box",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cut 6",
+      "parameters": {
+        "Base": "Cut 5",
+        "Color": "#808080",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Refine": false,
+        "Tool": "Box 6"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Box 7",
+      "parameters": {
+        "Color": "#808080",
+        "Height": 0.5,
+        "Length": 0.5,
+        "Placement": {
+          "Angle": 144.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            -3.640576474687263,
+            2.6450336353161297,
+            0.0
+          ]
+        },
+        "Width": 0.5
+      },
+      "shape": "Part::Box",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cut 7",
+      "parameters": {
+        "Base": "Cut 6",
+        "Color": "#808080",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Refine": false,
+        "Tool": "Box 7"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Box 8",
+      "parameters": {
+        "Color": "#808080",
+        "Height": 0.5,
+        "Length": 0.5,
+        "Placement": {
+          "Angle": 167.99999999999997,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            -4.401664203302125,
+            0.9356026086799187,
+            0.0
+          ]
+        },
+        "Width": 0.5
+      },
+      "shape": "Part::Box",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cut 8",
+      "parameters": {
+        "Base": "Cut 7",
+        "Color": "#808080",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Refine": false,
+        "Tool": "Box 8"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Box 9",
+      "parameters": {
+        "Color": "#808080",
+        "Height": 0.5,
+        "Length": 0.5,
+        "Placement": {
+          "Angle": 192.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            -4.401664203302126,
+            -0.9356026086799158,
+            0.0
+          ]
+        },
+        "Width": 0.5
+      },
+      "shape": "Part::Box",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cut 9",
+      "parameters": {
+        "Base": "Cut 8",
+        "Color": "#808080",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Refine": false,
+        "Tool": "Box 9"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Box 10",
+      "parameters": {
+        "Color": "#808080",
+        "Height": 0.5,
+        "Length": 0.5,
+        "Placement": {
+          "Angle": 216.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            -3.640576474687264,
+            -2.645033635316129,
+            0.0
+          ]
+        },
+        "Width": 0.5
+      },
+      "shape": "Part::Box",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cut 10",
+      "parameters": {
+        "Base": "Cut 9",
+        "Color": "#808080",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Refine": false,
+        "Tool": "Box 10"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Box 11",
+      "parameters": {
+        "Color": "#808080",
+        "Height": 0.5,
+        "Length": 0.5,
+        "Placement": {
+          "Angle": 239.99999999999997,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            -2.2500000000000018,
+            -3.8971143170299727,
+            0.0
+          ]
+        },
+        "Width": 0.5
+      },
+      "shape": "Part::Box",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cut 11",
+      "parameters": {
+        "Base": "Cut 10",
+        "Color": "#808080",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Refine": false,
+        "Tool": "Box 11"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Box 12",
+      "parameters": {
+        "Color": "#808080",
+        "Height": 0.5,
+        "Length": 0.5,
+        "Placement": {
+          "Angle": 264.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            -0.47037808470444403,
+            -4.4753485291572295,
+            0.0
+          ]
+        },
+        "Width": 0.5
+      },
+      "shape": "Part::Box",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cut 12",
+      "parameters": {
+        "Base": "Cut 11",
+        "Color": "#808080",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Refine": false,
+        "Tool": "Box 12"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Box 13",
+      "parameters": {
+        "Color": "#808080",
+        "Height": 0.5,
+        "Length": 0.5,
+        "Placement": {
+          "Angle": 288.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            1.3905764746872626,
+            -4.279754323328191,
+            0.0
+          ]
+        },
+        "Width": 0.5
+      },
+      "shape": "Part::Box",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cut 13",
+      "parameters": {
+        "Base": "Cut 12",
+        "Color": "#808080",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Refine": false,
+        "Tool": "Box 13"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Box 14",
+      "parameters": {
+        "Color": "#808080",
+        "Height": 0.5,
+        "Length": 0.5,
+        "Placement": {
+          "Angle": 312.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            3.01108772861486,
+            -3.3441517146482758,
+            0.0
+          ]
+        },
+        "Width": 0.5
+      },
+      "shape": "Part::Box",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cut 14",
+      "parameters": {
+        "Base": "Cut 13",
+        "Color": "#808080",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Refine": false,
+        "Tool": "Box 14"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Box 15",
+      "parameters": {
+        "Color": "#808080",
+        "Height": 0.5,
+        "Length": 0.5,
+        "Placement": {
+          "Angle": 335.99999999999994,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            4.110954559391702,
+            -1.8303148938411042,
+            0.0
+          ]
+        },
+        "Width": 0.5
+      },
+      "shape": "Part::Box",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cut 15",
+      "parameters": {
+        "Base": "Cut 14",
+        "Color": "#808080",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Refine": false,
+        "Tool": "Box 15"
+      },
+      "shape": "Part::Cut",
+      "visible": false
+    },
+    {
+      "metadata": null,
+      "name": "Cylinder 2",
+      "parameters": {
+        "Angle": 360.0,
+        "Color": "#808080",
+        "Height": 0.5,
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Radius": 1.5
+      },
+      "shape": "Part::Cylinder",
+      "visible": false
+    },
+    {
+      "geometryFeatures": [
         {
-            "metadata": null,
-            "visible": false,
-            "name": "Cylinder 1",
-            "shape": "Part::Cylinder",
-            "parameters": {
-                "Height": 0.5,
-                "Color": "#808080",
-                "Placement": {
-                    "Position": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "Angle": 0.0
-                },
-                "Radius": 4.75,
-                "Angle": 360.0
-            }
+          "center": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "edgeIndex": 68.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_circle_68",
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "radius": 1.5,
+          "type": "Feature::Circle"
         },
         {
-            "visible": false,
-            "metadata": null,
-            "shape": "Part::Box",
-            "name": "Box 1",
-            "parameters": {
-                "Height": 0.5,
-                "Length": 0.5,
-                "Color": "#808080",
-                "Placement": {
-                    "Angle": 0.0,
-                    "Position": [
-                        4.5,
-                        0.0,
-                        0.0
-                    ],
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ]
-                },
-                "Width": 0.5
-            }
+          "center": [
+            0.0,
+            0.0,
+            0.5
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "edgeIndex": 133.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_circle_133",
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "radius": 1.5,
+          "type": "Feature::Circle"
         },
         {
-            "metadata": null,
-            "visible": false,
-            "shape": "Part::Cut",
-            "parameters": {
-                "Tool": "Box 1",
-                "Placement": {
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "Position": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "Angle": 0.0
-                },
-                "Base": "Cylinder 1",
-                "Refine": false,
-                "Color": "#808080"
+          "center": [
+            0.0,
+            0.0,
+            0.5
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "edgeIndex": 362.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_circle_362",
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "radius": 1.5,
+          "type": "Feature::Circle"
+        },
+        {
+          "center": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "edgeIndex": 364.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_circle_364",
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "radius": 1.5,
+          "type": "Feature::Circle"
+        },
+        {
+          "center": [
+            4.5,
+            0.0,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000002000000023,
+              "length": 0.25000020000000234,
+              "width": 2.0000000349024335e-07
             },
-            "name": "Cut 1"
+            "faceIndex": 1.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_1",
+          "normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "type": "Feature::Plane"
         },
         {
-            "visible": false,
-            "metadata": null,
-            "name": "Box 2",
-            "shape": "Part::Box",
-            "parameters": {
-                "Length": 0.5,
-                "Width": 0.5,
-                "Color": "#808080",
-                "Placement": {
-                    "Position": [
-                        4.110954559391704,
-                        1.8303148938411007,
-                        0.0
-                    ],
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "Angle": 24.0
-                },
-                "Height": 0.5
-            }
-        },
-        {
-            "name": "Cut 2",
-            "visible": false,
-            "shape": "Part::Cut",
-            "parameters": {
-                "Base": "Cut 1",
-                "Placement": {
-                    "Angle": 0.0,
-                    "Position": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ]
-                },
-                "Refine": false,
-                "Tool": "Box 2",
-                "Color": "#808080"
+          "center": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 2e-07,
+              "length": 9.5000002,
+              "width": 9.499998903768935
             },
-            "metadata": null
+            "faceIndex": 2.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_2",
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "type": "Feature::Plane"
         },
         {
-            "name": "Box 3",
-            "shape": "Part::Box",
-            "visible": false,
-            "parameters": {
-                "Color": "#808080",
-                "Length": 0.5,
-                "Placement": {
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "Angle": 48.0,
-                    "Position": [
-                        3.011087728614862,
-                        3.3441517146482735,
-                        0.0
-                    ]
-                },
-                "Height": 0.5,
-                "Width": 0.5
+          "center": [
+            4.314322880929603,
+            -1.373542165019804,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.204278928298689,
+              "width": 0.09095094963692496
             },
-            "metadata": null
+            "faceIndex": 3.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_3",
+          "normal": [
+            0.40673664307580093,
+            0.9135454576426005,
+            0.0
+          ],
+          "type": "Feature::Plane"
         },
         {
-            "parameters": {
-                "Tool": "Box 3",
-                "Color": "#808080",
-                "Placement": {
-                    "Angle": 0.0,
-                    "Position": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ]
-                },
-                "Base": "Cut 2",
-                "Refine": false
+          "center": [
+            0.0,
+            0.0,
+            0.5
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 1.9999999995023998e-07,
+              "length": 9.5000002,
+              "width": 9.499998903768935
             },
-            "shape": "Part::Cut",
-            "metadata": null,
-            "name": "Cut 3",
-            "visible": false
+            "faceIndex": 4.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_4",
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "type": "Feature::Plane"
         },
         {
-            "shape": "Part::Box",
-            "parameters": {
-                "Placement": {
-                    "Angle": 72.0,
-                    "Position": [
-                        1.3905764746872635,
-                        4.2797543233281905,
-                        0.0
-                    ],
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ]
-                },
-                "Color": "#808080",
-                "Height": 0.5,
-                "Width": 0.5,
-                "Length": 0.5
+          "center": [
+            4.5,
+            0.0,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 2.0000000056086265e-07,
+              "width": 0.5000001999999999
             },
-            "visible": false,
-            "name": "Box 4",
-            "metadata": null
+            "faceIndex": 5.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_5",
+          "normal": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "type": "Feature::Plane"
         },
         {
-            "metadata": null,
-            "visible": false,
-            "parameters": {
-                "Base": "Cut 3",
-                "Color": "#808080",
-                "Refine": false,
-                "Placement": {
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "Position": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "Angle": 0.0
-                },
-                "Tool": "Box 4"
+          "center": [
+            4.5,
+            0.5,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.22361110692279684,
+              "width": 1.9999999995023998e-07
             },
-            "shape": "Part::Cut",
-            "name": "Cut 4"
+            "faceIndex": 6.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_6",
+          "normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "type": "Feature::Plane"
         },
         {
-            "visible": false,
-            "parameters": {
-                "Height": 0.5,
-                "Placement": {
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "Angle": 96.0,
-                    "Position": [
-                        -0.47037808470444,
-                        4.47534852915723,
-                        0.0
-                    ]
-                },
-                "Length": 0.5,
-                "Color": "#808080",
-                "Width": 0.5
+          "center": [
+            4.110954559391704,
+            1.8303148938411007,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.22838656441065108,
+              "width": 0.10168436076895038
             },
-            "metadata": null,
-            "shape": "Part::Box",
-            "name": "Box 5"
+            "faceIndex": 8.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_8",
+          "normal": [
+            -0.40673664307580026,
+            0.913545457642601,
+            0.0
+          ],
+          "type": "Feature::Plane"
         },
         {
-            "parameters": {
-                "Tool": "Box 5",
-                "Refine": false,
-                "Color": "#808080",
-                "Placement": {
-                    "Position": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "Angle": 0.0
-                },
-                "Base": "Cut 4"
+          "center": [
+            4.110954559391704,
+            1.8303148938411007,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.2033685215379002,
+              "width": 0.4567729288213005
             },
-            "shape": "Part::Cut",
-            "name": "Cut 5",
-            "metadata": null,
-            "visible": false
+            "faceIndex": 9.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_9",
+          "normal": [
+            0.913545457642601,
+            0.40673664307580026,
+            0.0
+          ],
+          "type": "Feature::Plane"
         },
         {
-            "name": "Box 6",
-            "shape": "Part::Box",
-            "visible": false,
-            "metadata": null,
-            "parameters": {
-                "Color": "#808080",
-                "Height": 0.5,
-                "Placement": {
-                    "Angle": 119.99999999999999,
-                    "Position": [
-                        -2.249999999999999,
-                        3.897114317029974,
-                        0.0
-                    ],
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ]
-                },
-                "Width": 0.5,
-                "Length": 0.5
-            }
-        },
-        {
-            "name": "Cut 6",
-            "visible": false,
-            "parameters": {
-                "Placement": {
-                    "Position": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "Angle": 0.0
-                },
-                "Tool": "Box 6",
-                "Base": "Cut 5",
-                "Refine": false,
-                "Color": "#808080"
+          "center": [
+            4.110954559391702,
+            -1.8303148938411042,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.20336852153790108,
+              "width": 0.4567729288213003
             },
-            "shape": "Part::Cut",
-            "metadata": null
+            "faceIndex": 10.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_10",
+          "normal": [
+            0.9135454576426005,
+            -0.40673664307580093,
+            0.0
+          ],
+          "type": "Feature::Plane"
         },
         {
-            "visible": false,
-            "parameters": {
-                "Color": "#808080",
-                "Width": 0.5,
-                "Height": 0.5,
-                "Placement": {
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "Angle": 144.0,
-                    "Position": [
-                        -3.640576474687263,
-                        2.6450336353161297,
-                        0.0
-                    ]
-                },
-                "Length": 0.5
+          "center": [
+            3.907586237853804,
+            2.2870876226624013,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.2042789282986659,
+              "width": 0.0909509496369143
             },
-            "metadata": null,
-            "name": "Box 7",
-            "shape": "Part::Box"
+            "faceIndex": 11.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_11",
+          "normal": [
+            -0.40673664307580026,
+            0.913545457642601,
+            0.0
+          ],
+          "type": "Feature::Plane"
         },
         {
-            "name": "Cut 7",
-            "shape": "Part::Cut",
-            "visible": false,
-            "metadata": null,
-            "parameters": {
-                "Tool": "Box 7",
-                "Color": "#808080",
-                "Base": "Cut 6",
-                "Placement": {
-                    "Angle": 0.0,
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "Position": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ]
-                },
-                "Refine": false
-            }
-        },
-        {
-            "metadata": null,
-            "parameters": {
-                "Color": "#808080",
-                "Length": 0.5,
-                "Width": 0.5,
-                "Placement": {
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "Position": [
-                        -4.401664203302125,
-                        0.9356026086799187,
-                        0.0
-                    ],
-                    "Angle": 167.99999999999997
-                },
-                "Height": 0.5
+          "center": [
+            4.110954559391702,
+            -1.8303148938411042,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.22838656441065108,
+              "width": 0.1016843607689506
             },
-            "name": "Box 8",
-            "shape": "Part::Box",
-            "visible": false
+            "faceIndex": 12.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_12",
+          "normal": [
+            0.40673664307580093,
+            0.9135454576426005,
+            0.0
+          ],
+          "type": "Feature::Plane"
         },
         {
-            "name": "Cut 8",
-            "parameters": {
-                "Base": "Cut 7",
-                "Color": "#808080",
-                "Placement": {
-                    "Angle": 0.0,
-                    "Position": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ]
-                },
-                "Tool": "Box 8",
-                "Refine": false
+          "center": [
+            3.011087728614862,
+            3.3441517146482735,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.16728285158971445,
+              "width": 0.18578640636934818
             },
-            "metadata": null,
-            "shape": "Part::Cut",
-            "visible": false
+            "faceIndex": 15.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_15",
+          "normal": [
+            -0.7431448254773942,
+            0.6691306063588582,
+            0.0
+          ],
+          "type": "Feature::Plane"
         },
         {
-            "metadata": null,
-            "visible": false,
-            "shape": "Part::Box",
-            "parameters": {
-                "Color": "#808080",
-                "Placement": {
-                    "Position": [
-                        -4.401664203302126,
-                        -0.9356026086799158,
-                        0.0
-                    ],
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "Angle": 192.0
-                },
-                "Length": 0.5,
-                "Height": 0.5,
-                "Width": 0.5
+          "center": [
+            3.3826601413535573,
+            -3.009586411468847,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.14962510173770482,
+              "width": 0.16617548839998353
             },
-            "name": "Box 9"
+            "faceIndex": 16.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_16",
+          "normal": [
+            0.7431448254773947,
+            0.6691306063588579,
+            0.0
+          ],
+          "type": "Feature::Plane"
         },
         {
-            "parameters": {
-                "Placement": {
-                    "Angle": 0.0,
-                    "Position": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ]
-                },
-                "Tool": "Box 9",
-                "Refine": false,
-                "Base": "Cut 8",
-                "Color": "#808080"
+          "center": [
+            3.011087728614862,
+            3.3441517146482735,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.3715726127386967,
+              "width": 0.3345655031794288
             },
-            "visible": false,
-            "name": "Cut 9",
-            "metadata": null,
-            "shape": "Part::Cut"
+            "faceIndex": 17.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_17",
+          "normal": [
+            0.6691306063588582,
+            0.7431448254773942,
+            0.0
+          ],
+          "type": "Feature::Plane"
         },
         {
-            "visible": false,
-            "metadata": null,
-            "shape": "Part::Box",
-            "name": "Box 10",
-            "parameters": {
-                "Length": 0.5,
-                "Color": "#808080",
-                "Height": 0.5,
-                "Placement": {
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "Angle": 216.0,
-                    "Position": [
-                        -3.640576474687264,
-                        -2.645033635316129,
-                        0.0
-                    ]
-                },
-                "Width": 0.5
-            }
-        },
-        {
-            "visible": false,
-            "shape": "Part::Cut",
-            "metadata": null,
-            "name": "Cut 10",
-            "parameters": {
-                "Refine": false,
-                "Base": "Cut 9",
-                "Tool": "Box 10",
-                "Color": "#808080",
-                "Placement": {
-                    "Position": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "Angle": 0.0
-                }
-            }
-        },
-        {
-            "parameters": {
-                "Length": 0.5,
-                "Placement": {
-                    "Angle": 239.99999999999997,
-                    "Position": [
-                        -2.2500000000000018,
-                        -3.8971143170299727,
-                        0.0
-                    ],
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ]
-                },
-                "Color": "#808080",
-                "Height": 0.5,
-                "Width": 0.5
+          "center": [
+            3.01108772861486,
+            -3.3441517146482758,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.37157261273869713,
+              "width": 0.3345655031794288
             },
-            "visible": false,
-            "metadata": null,
-            "shape": "Part::Box",
-            "name": "Box 11"
+            "faceIndex": 18.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_18",
+          "normal": [
+            0.6691306063588579,
+            -0.7431448254773947,
+            0.0
+          ],
+          "type": "Feature::Plane"
         },
         {
-            "visible": false,
-            "parameters": {
-                "Refine": false,
-                "Tool": "Box 11",
-                "Color": "#808080",
-                "Base": "Cut 10",
-                "Placement": {
-                    "Position": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "Angle": 0.0
-                }
+          "center": [
+            2.639515315876165,
+            3.6787170178277027,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.14962510173770438,
+              "width": 0.16617548839998308
             },
-            "shape": "Part::Cut",
-            "metadata": null,
-            "name": "Cut 11"
+            "faceIndex": 19.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_19",
+          "normal": [
+            -0.7431448254773942,
+            0.6691306063588582,
+            0.0
+          ],
+          "type": "Feature::Plane"
         },
         {
-            "visible": false,
-            "metadata": null,
-            "parameters": {
-                "Length": 0.5,
-                "Height": 0.5,
-                "Placement": {
-                    "Angle": 264.0,
-                    "Position": [
-                        -0.47037808470444403,
-                        -4.4753485291572295,
-                        0.0
-                    ],
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ]
-                },
-                "Width": 0.5,
-                "Color": "#808080"
+          "center": [
+            3.01108772861486,
+            -3.3441517146482758,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.16728285158971445,
+              "width": 0.18578640636934907
             },
-            "name": "Box 12",
-            "shape": "Part::Box"
+            "faceIndex": 20.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_20",
+          "normal": [
+            0.7431448254773947,
+            0.6691306063588579,
+            0.0
+          ],
+          "type": "Feature::Plane"
         },
         {
-            "parameters": {
-                "Refine": false,
-                "Color": "#808080",
-                "Base": "Cut 11",
-                "Tool": "Box 12",
-                "Placement": {
-                    "Position": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "Angle": 0.0
-                }
+          "center": [
+            1.3905764746872635,
+            4.2797543233281905,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.07725444859373742,
+              "width": 0.23776432907378986
             },
-            "metadata": null,
-            "shape": "Part::Cut",
-            "name": "Cut 12",
-            "visible": false
+            "faceIndex": 23.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_23",
+          "normal": [
+            -0.9510565162951536,
+            0.3090169943749475,
+            0.0
+          ],
+          "type": "Feature::Plane"
         },
         {
-            "metadata": null,
-            "name": "Box 13",
-            "visible": false,
-            "shape": "Part::Box",
-            "parameters": {
-                "Height": 0.5,
-                "Length": 0.5,
-                "Placement": {
-                    "Position": [
-                        1.3905764746872626,
-                        -4.279754323328191,
-                        0.0
-                    ],
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "Angle": 288.0
-                },
-                "Width": 0.5,
-                "Color": "#808080"
-            }
-        },
-        {
-            "visible": false,
-            "name": "Cut 13",
-            "parameters": {
-                "Base": "Cut 12",
-                "Color": "#808080",
-                "Tool": "Box 13",
-                "Refine": false,
-                "Placement": {
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "Position": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "Angle": 0.0
-                }
+          "center": [
+            1.8661047328348395,
+            -4.125245826140718,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.06909977036673975,
+              "width": 0.212666810143598
             },
-            "shape": "Part::Cut",
-            "metadata": null
+            "faceIndex": 24.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_24",
+          "normal": [
+            0.9510565162951536,
+            0.30901699437494723,
+            0.0
+          ],
+          "type": "Feature::Plane"
         },
         {
-            "shape": "Part::Box",
-            "name": "Box 14",
-            "parameters": {
-                "Color": "#808080",
-                "Placement": {
-                    "Position": [
-                        3.01108772861486,
-                        -3.3441517146482758,
-                        0.0
-                    ],
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "Angle": 312.0
-                },
-                "Height": 0.5,
-                "Width": 0.5,
-                "Length": 0.5
+          "center": [
+            1.3905764746872635,
+            4.2797543233281905,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.4755284581475768,
+              "width": 0.15450869718747473
             },
-            "metadata": null,
-            "visible": false
+            "faceIndex": 25.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_25",
+          "normal": [
+            0.3090169943749475,
+            0.9510565162951536,
+            0.0
+          ],
+          "type": "Feature::Plane"
         },
         {
-            "visible": false,
-            "metadata": null,
-            "name": "Cut 14",
-            "shape": "Part::Cut",
-            "parameters": {
-                "Placement": {
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "Position": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "Angle": 0.0
-                },
-                "Tool": "Box 14",
-                "Refine": false,
-                "Base": "Cut 13",
-                "Color": "#808080"
-            }
-        },
-        {
-            "visible": false,
-            "shape": "Part::Box",
-            "metadata": null,
-            "name": "Box 15",
-            "parameters": {
-                "Height": 0.5,
-                "Color": "#808080",
-                "Length": 0.5,
-                "Placement": {
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "Angle": 335.99999999999994,
-                    "Position": [
-                        4.110954559391702,
-                        -1.8303148938411042,
-                        0.0
-                    ]
-                },
-                "Width": 0.5
-            }
-        },
-        {
-            "visible": false,
-            "shape": "Part::Cut",
-            "parameters": {
-                "Tool": "Box 15",
-                "Refine": false,
-                "Base": "Cut 14",
-                "Placement": {
-                    "Position": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "Angle": 0.0
-                },
-                "Color": "#808080"
+          "center": [
+            1.3905764746872626,
+            -4.279754323328191,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.47552845814757694,
+              "width": 0.15450869718747384
             },
-            "name": "Cut 15",
-            "metadata": null
+            "faceIndex": 26.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_26",
+          "normal": [
+            0.30901699437494723,
+            -0.9510565162951536,
+            0.0
+          ],
+          "type": "Feature::Plane"
         },
         {
-            "visible": false,
-            "metadata": null,
-            "shape": "Part::Cylinder",
-            "name": "Cylinder 2",
-            "parameters": {
-                "Height": 0.5,
-                "Placement": {
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "Angle": 0.0,
-                    "Position": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ]
-                },
-                "Radius": 1.5,
-                "Angle": 360.0,
-                "Color": "#808080"
-            }
-        },
-        {
-            "parameters": {
-                "Refine": false,
-                "Base": "Cut 15",
-                "Placement": {
-                    "Axis": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "Angle": 0.0,
-                    "Position": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ]
-                },
-                "Color": "#808080",
-                "Tool": "Cylinder 2"
+          "center": [
+            0.9150482165396867,
+            4.434262820515665,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.06909977036673876,
+              "width": 0.21266681014359623
             },
-            "metadata": null,
-            "shape": "Part::Cut",
-            "visible": true,
-            "assemblyFeatures": [
-                {
-                    "name": "Cut 16_circle_68",
-                    "type": "Feature::Circle",
-                    "center": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "normal": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "radius": 1.5,
-                    "metadata": {
-                        "edgeIndex": 68.0,
-                        "originalShape": "Part::Cut",
-                        "featureLevel": "low"
-                    },
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5"
-                },
-                {
-                    "center": [
-                        0.0,
-                        0.0,
-                        0.5
-                    ],
-                    "type": "Feature::Circle",
-                    "normal": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "metadata": {
-                        "featureLevel": "low",
-                        "originalShape": "Part::Cut",
-                        "edgeIndex": 133.0
-                    },
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "radius": 1.5,
-                    "name": "Cut 16_circle_133"
-                },
-                {
-                    "metadata": {
-                        "featureLevel": "low",
-                        "edgeIndex": 362.0,
-                        "originalShape": "Part::Cut"
-                    },
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "normal": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "radius": 1.5,
-                    "type": "Feature::Circle",
-                    "center": [
-                        0.0,
-                        0.0,
-                        0.5
-                    ],
-                    "name": "Cut 16_circle_362"
-                },
-                {
-                    "type": "Feature::Circle",
-                    "radius": 1.5,
-                    "normal": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "center": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "name": "Cut 16_circle_364",
-                    "metadata": {
-                        "edgeIndex": 364.0,
-                        "featureLevel": "low",
-                        "originalShape": "Part::Cut"
-                    },
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5"
-                },
-                {
-                    "normal": [
-                        0.0,
-                        1.0,
-                        0.0
-                    ],
-                    "type": "Feature::Plane",
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "metadata": {
-                        "bounds": {
-                            "length": 0.25000020000000234,
-                            "height": 0.5000002000000023,
-                            "width": 2.0000000349024335e-07
-                        },
-                        "faceIndex": 1.0,
-                        "originalShape": "Part::Cut",
-                        "featureLevel": "low"
-                    },
-                    "name": "Cut 16_plane_1",
-                    "center": [
-                        4.5,
-                        0.0,
-                        0.0
-                    ]
-                },
-                {
-                    "metadata": {
-                        "featureLevel": "low",
-                        "originalShape": "Part::Cut",
-                        "bounds": {
-                            "height": 2e-07,
-                            "length": 9.5000002,
-                            "width": 9.499998903768935
-                        },
-                        "faceIndex": 2.0
-                    },
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "type": "Feature::Plane",
-                    "name": "Cut 16_plane_2",
-                    "center": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "normal": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ]
-                },
-                {
-                    "name": "Cut 16_plane_3",
-                    "center": [
-                        4.314322880929603,
-                        -1.373542165019804,
-                        0.0
-                    ],
-                    "type": "Feature::Plane",
-                    "normal": [
-                        0.40673664307580093,
-                        0.9135454576426005,
-                        0.0
-                    ],
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "metadata": {
-                        "bounds": {
-                            "width": 0.09095094963692496,
-                            "height": 0.5000001999999999,
-                            "length": 0.204278928298689
-                        },
-                        "faceIndex": 3.0,
-                        "originalShape": "Part::Cut",
-                        "featureLevel": "low"
-                    }
-                },
-                {
-                    "metadata": {
-                        "featureLevel": "low",
-                        "originalShape": "Part::Cut",
-                        "bounds": {
-                            "length": 9.5000002,
-                            "width": 9.499998903768935,
-                            "height": 1.9999999995023998e-07
-                        },
-                        "faceIndex": 4.0
-                    },
-                    "name": "Cut 16_plane_4",
-                    "normal": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "center": [
-                        0.0,
-                        0.0,
-                        0.5
-                    ],
-                    "type": "Feature::Plane"
-                },
-                {
-                    "type": "Feature::Plane",
-                    "normal": [
-                        1.0,
-                        0.0,
-                        0.0
-                    ],
-                    "name": "Cut 16_plane_5",
-                    "metadata": {
-                        "bounds": {
-                            "length": 2.0000000056086265e-07,
-                            "height": 0.5000001999999999,
-                            "width": 0.5000001999999999
-                        },
-                        "featureLevel": "low",
-                        "faceIndex": 5.0,
-                        "originalShape": "Part::Cut"
-                    },
-                    "center": [
-                        4.5,
-                        0.0,
-                        0.0
-                    ],
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5"
-                },
-                {
-                    "metadata": {
-                        "originalShape": "Part::Cut",
-                        "faceIndex": 6.0,
-                        "featureLevel": "low",
-                        "bounds": {
-                            "length": 0.22361110692279684,
-                            "height": 0.5000001999999999,
-                            "width": 1.9999999995023998e-07
-                        }
-                    },
-                    "normal": [
-                        0.0,
-                        1.0,
-                        0.0
-                    ],
-                    "type": "Feature::Plane",
-                    "center": [
-                        4.5,
-                        0.5,
-                        0.0
-                    ],
-                    "name": "Cut 16_plane_6",
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5"
-                },
-                {
-                    "type": "Feature::Plane",
-                    "name": "Cut 16_plane_8",
-                    "normal": [
-                        -0.40673664307580026,
-                        0.913545457642601,
-                        0.0
-                    ],
-                    "center": [
-                        4.110954559391704,
-                        1.8303148938411007,
-                        0.0
-                    ],
-                    "metadata": {
-                        "featureLevel": "low",
-                        "bounds": {
-                            "width": 0.10168436076895038,
-                            "length": 0.22838656441065108,
-                            "height": 0.5000001999999999
-                        },
-                        "faceIndex": 8.0,
-                        "originalShape": "Part::Cut"
-                    },
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5"
-                },
-                {
-                    "type": "Feature::Plane",
-                    "normal": [
-                        0.913545457642601,
-                        0.40673664307580026,
-                        0.0
-                    ],
-                    "center": [
-                        4.110954559391704,
-                        1.8303148938411007,
-                        0.0
-                    ],
-                    "metadata": {
-                        "featureLevel": "low",
-                        "originalShape": "Part::Cut",
-                        "faceIndex": 9.0,
-                        "bounds": {
-                            "length": 0.2033685215379002,
-                            "height": 0.5000001999999999,
-                            "width": 0.4567729288213005
-                        }
-                    },
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "name": "Cut 16_plane_9"
-                },
-                {
-                    "name": "Cut 16_plane_10",
-                    "normal": [
-                        0.9135454576426005,
-                        -0.40673664307580093,
-                        0.0
-                    ],
-                    "type": "Feature::Plane",
-                    "center": [
-                        4.110954559391702,
-                        -1.8303148938411042,
-                        0.0
-                    ],
-                    "metadata": {
-                        "featureLevel": "low",
-                        "originalShape": "Part::Cut",
-                        "bounds": {
-                            "height": 0.5000001999999999,
-                            "width": 0.4567729288213003,
-                            "length": 0.20336852153790108
-                        },
-                        "faceIndex": 10.0
-                    },
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5"
-                },
-                {
-                    "type": "Feature::Plane",
-                    "normal": [
-                        -0.40673664307580026,
-                        0.913545457642601,
-                        0.0
-                    ],
-                    "name": "Cut 16_plane_11",
-                    "center": [
-                        3.907586237853804,
-                        2.2870876226624013,
-                        0.0
-                    ],
-                    "metadata": {
-                        "originalShape": "Part::Cut",
-                        "faceIndex": 11.0,
-                        "bounds": {
-                            "length": 0.2042789282986659,
-                            "height": 0.5000001999999999,
-                            "width": 0.0909509496369143
-                        },
-                        "featureLevel": "low"
-                    },
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5"
-                },
-                {
-                    "normal": [
-                        0.40673664307580093,
-                        0.9135454576426005,
-                        0.0
-                    ],
-                    "center": [
-                        4.110954559391702,
-                        -1.8303148938411042,
-                        0.0
-                    ],
-                    "metadata": {
-                        "featureLevel": "low",
-                        "bounds": {
-                            "width": 0.1016843607689506,
-                            "height": 0.5000001999999999,
-                            "length": 0.22838656441065108
-                        },
-                        "faceIndex": 12.0,
-                        "originalShape": "Part::Cut"
-                    },
-                    "name": "Cut 16_plane_12",
-                    "type": "Feature::Plane",
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5"
-                },
-                {
-                    "metadata": {
-                        "bounds": {
-                            "length": 0.16728285158971445,
-                            "height": 0.5000001999999999,
-                            "width": 0.18578640636934818
-                        },
-                        "originalShape": "Part::Cut",
-                        "faceIndex": 15.0,
-                        "featureLevel": "low"
-                    },
-                    "type": "Feature::Plane",
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "name": "Cut 16_plane_15",
-                    "center": [
-                        3.011087728614862,
-                        3.3441517146482735,
-                        0.0
-                    ],
-                    "normal": [
-                        -0.7431448254773942,
-                        0.6691306063588582,
-                        0.0
-                    ]
-                },
-                {
-                    "name": "Cut 16_plane_16",
-                    "metadata": {
-                        "featureLevel": "low",
-                        "originalShape": "Part::Cut",
-                        "faceIndex": 16.0,
-                        "bounds": {
-                            "width": 0.16617548839998353,
-                            "length": 0.14962510173770482,
-                            "height": 0.5000001999999999
-                        }
-                    },
-                    "center": [
-                        3.3826601413535573,
-                        -3.009586411468847,
-                        0.0
-                    ],
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "type": "Feature::Plane",
-                    "normal": [
-                        0.7431448254773947,
-                        0.6691306063588579,
-                        0.0
-                    ]
-                },
-                {
-                    "name": "Cut 16_plane_17",
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "normal": [
-                        0.6691306063588582,
-                        0.7431448254773942,
-                        0.0
-                    ],
-                    "metadata": {
-                        "featureLevel": "low",
-                        "originalShape": "Part::Cut",
-                        "faceIndex": 17.0,
-                        "bounds": {
-                            "height": 0.5000001999999999,
-                            "length": 0.3715726127386967,
-                            "width": 0.3345655031794288
-                        }
-                    },
-                    "type": "Feature::Plane",
-                    "center": [
-                        3.011087728614862,
-                        3.3441517146482735,
-                        0.0
-                    ]
-                },
-                {
-                    "metadata": {
-                        "originalShape": "Part::Cut",
-                        "faceIndex": 18.0,
-                        "bounds": {
-                            "width": 0.3345655031794288,
-                            "height": 0.5000001999999999,
-                            "length": 0.37157261273869713
-                        },
-                        "featureLevel": "low"
-                    },
-                    "type": "Feature::Plane",
-                    "name": "Cut 16_plane_18",
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "normal": [
-                        0.6691306063588579,
-                        -0.7431448254773947,
-                        0.0
-                    ],
-                    "center": [
-                        3.01108772861486,
-                        -3.3441517146482758,
-                        0.0
-                    ]
-                },
-                {
-                    "center": [
-                        2.639515315876165,
-                        3.6787170178277027,
-                        0.0
-                    ],
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "normal": [
-                        -0.7431448254773942,
-                        0.6691306063588582,
-                        0.0
-                    ],
-                    "type": "Feature::Plane",
-                    "metadata": {
-                        "bounds": {
-                            "height": 0.5000001999999999,
-                            "width": 0.16617548839998308,
-                            "length": 0.14962510173770438
-                        },
-                        "originalShape": "Part::Cut",
-                        "featureLevel": "low",
-                        "faceIndex": 19.0
-                    },
-                    "name": "Cut 16_plane_19"
-                },
-                {
-                    "name": "Cut 16_plane_20",
-                    "metadata": {
-                        "faceIndex": 20.0,
-                        "bounds": {
-                            "length": 0.16728285158971445,
-                            "width": 0.18578640636934907,
-                            "height": 0.5000001999999999
-                        },
-                        "featureLevel": "low",
-                        "originalShape": "Part::Cut"
-                    },
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "center": [
-                        3.01108772861486,
-                        -3.3441517146482758,
-                        0.0
-                    ],
-                    "type": "Feature::Plane",
-                    "normal": [
-                        0.7431448254773947,
-                        0.6691306063588579,
-                        0.0
-                    ]
-                },
-                {
-                    "metadata": {
-                        "faceIndex": 23.0,
-                        "featureLevel": "low",
-                        "originalShape": "Part::Cut",
-                        "bounds": {
-                            "width": 0.23776432907378986,
-                            "height": 0.5000001999999999,
-                            "length": 0.07725444859373742
-                        }
-                    },
-                    "normal": [
-                        -0.9510565162951536,
-                        0.3090169943749475,
-                        0.0
-                    ],
-                    "center": [
-                        1.3905764746872635,
-                        4.2797543233281905,
-                        0.0
-                    ],
-                    "name": "Cut 16_plane_23",
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "type": "Feature::Plane"
-                },
-                {
-                    "name": "Cut 16_plane_24",
-                    "normal": [
-                        0.9510565162951536,
-                        0.30901699437494723,
-                        0.0
-                    ],
-                    "center": [
-                        1.8661047328348395,
-                        -4.125245826140718,
-                        0.0
-                    ],
-                    "metadata": {
-                        "faceIndex": 24.0,
-                        "featureLevel": "low",
-                        "originalShape": "Part::Cut",
-                        "bounds": {
-                            "length": 0.06909977036673975,
-                            "width": 0.212666810143598,
-                            "height": 0.5000001999999999
-                        }
-                    },
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "type": "Feature::Plane"
-                },
-                {
-                    "name": "Cut 16_plane_25",
-                    "type": "Feature::Plane",
-                    "center": [
-                        1.3905764746872635,
-                        4.2797543233281905,
-                        0.0
-                    ],
-                    "metadata": {
-                        "originalShape": "Part::Cut",
-                        "bounds": {
-                            "length": 0.4755284581475768,
-                            "width": 0.15450869718747473,
-                            "height": 0.5000001999999999
-                        },
-                        "featureLevel": "low",
-                        "faceIndex": 25.0
-                    },
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "normal": [
-                        0.3090169943749475,
-                        0.9510565162951536,
-                        0.0
-                    ]
-                },
-                {
-                    "type": "Feature::Plane",
-                    "metadata": {
-                        "faceIndex": 26.0,
-                        "bounds": {
-                            "width": 0.15450869718747384,
-                            "height": 0.5000001999999999,
-                            "length": 0.47552845814757694
-                        },
-                        "featureLevel": "low",
-                        "originalShape": "Part::Cut"
-                    },
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "center": [
-                        1.3905764746872626,
-                        -4.279754323328191,
-                        0.0
-                    ],
-                    "normal": [
-                        0.30901699437494723,
-                        -0.9510565162951536,
-                        0.0
-                    ],
-                    "name": "Cut 16_plane_26"
-                },
-                {
-                    "normal": [
-                        -0.9510565162951536,
-                        0.3090169943749475,
-                        0.0
-                    ],
-                    "name": "Cut 16_plane_27",
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "type": "Feature::Plane",
-                    "metadata": {
-                        "originalShape": "Part::Cut",
-                        "faceIndex": 27.0,
-                        "featureLevel": "low",
-                        "bounds": {
-                            "height": 0.5000001999999999,
-                            "length": 0.06909977036673876,
-                            "width": 0.21266681014359623
-                        }
-                    },
-                    "center": [
-                        0.9150482165396867,
-                        4.434262820515665,
-                        0.0
-                    ]
-                },
-                {
-                    "center": [
-                        1.3905764746872626,
-                        -4.279754323328191,
-                        0.0
-                    ],
-                    "type": "Feature::Plane",
-                    "name": "Cut 16_plane_28",
-                    "normal": [
-                        0.9510565162951536,
-                        0.30901699437494723,
-                        0.0
-                    ],
-                    "metadata": {
-                        "faceIndex": 28.0,
-                        "featureLevel": "low",
-                        "originalShape": "Part::Cut",
-                        "bounds": {
-                            "length": 0.07725444859373698,
-                            "width": 0.23776432907378897,
-                            "height": 0.5000001999999999
-                        }
-                    },
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5"
-                },
-                {
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "name": "Cut 16_plane_31",
-                    "normal": [
-                        -0.9945218953682734,
-                        -0.10452846326765354,
-                        0.0
-                    ],
-                    "type": "Feature::Plane",
-                    "metadata": {
-                        "faceIndex": 31.0,
-                        "bounds": {
-                            "height": 0.5000001999999999,
-                            "width": 0.24863067384206872,
-                            "length": 0.026132315816913387
-                        },
-                        "featureLevel": "low",
-                        "originalShape": "Part::Cut"
-                    },
-                    "center": [
-                        -0.47037808470444,
-                        4.47534852915723,
-                        0.0
-                    ]
-                },
-                {
-                    "normal": [
-                        0.9945218953682734,
-                        -0.1045284632676533,
-                        0.0
-                    ],
-                    "center": [
-                        0.026882862979692668,
-                        -4.527612760791056,
-                        0.0
-                    ],
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "metadata": {
-                        "faceIndex": 32.0,
-                        "bounds": {
-                            "length": 0.023373904470526168,
-                            "width": 0.22238614297787862,
-                            "height": 0.5000001999999999
-                        },
-                        "originalShape": "Part::Cut",
-                        "featureLevel": "low"
-                    },
-                    "name": "Cut 16_plane_32",
-                    "type": "Feature::Plane"
-                },
-                {
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "type": "Feature::Plane",
-                    "name": "Cut 16_plane_33",
-                    "normal": [
-                        -0.10452846326765354,
-                        0.9945218953682734,
-                        0.0
-                    ],
-                    "center": [
-                        -0.47037808470444,
-                        4.47534852915723,
-                        0.0
-                    ],
-                    "metadata": {
-                        "featureLevel": "low",
-                        "originalShape": "Part::Cut",
-                        "bounds": {
-                            "height": 0.5000001999999999,
-                            "length": 0.4972611476841366,
-                            "width": 0.052264431633827435
-                        },
-                        "faceIndex": 33.0
-                    }
-                },
-                {
-                    "normal": [
-                        -0.1045284632676533,
-                        -0.9945218953682734,
-                        0.0
-                    ],
-                    "type": "Feature::Plane",
-                    "metadata": {
-                        "bounds": {
-                            "width": 0.052264431633827435,
-                            "length": 0.4972611476841367,
-                            "height": 0.5000001999999999
-                        },
-                        "faceIndex": 34.0,
-                        "featureLevel": "low",
-                        "originalShape": "Part::Cut"
-                    },
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "center": [
-                        -0.47037808470444403,
-                        -4.4753485291572295,
-                        0.0
-                    ],
-                    "name": "Cut 16_plane_34"
-                },
-                {
-                    "center": [
-                        -0.9676390323885766,
-                        4.4230842975234035,
-                        0.0
-                    ],
-                    "normal": [
-                        -0.9945218953682734,
-                        -0.10452846326765354,
-                        0.0
-                    ],
-                    "type": "Feature::Plane",
-                    "name": "Cut 16_plane_35",
-                    "metadata": {
-                        "featureLevel": "low",
-                        "originalShape": "Part::Cut",
-                        "bounds": {
-                            "length": 0.023373904470526452,
-                            "width": 0.22238614297788128,
-                            "height": 0.5000001999999999
-                        },
-                        "faceIndex": 35.0
-                    },
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5"
-                },
-                {
-                    "metadata": {
-                        "faceIndex": 36.0,
-                        "bounds": {
-                            "length": 0.026132315816913387,
-                            "height": 0.5000001999999999,
-                            "width": 0.2486306738420696
-                        },
-                        "originalShape": "Part::Cut",
-                        "featureLevel": "low"
-                    },
-                    "center": [
-                        -0.47037808470444403,
-                        -4.4753485291572295,
-                        0.0
-                    ],
-                    "normal": [
-                        0.9945218953682734,
-                        -0.1045284632676533,
-                        0.0
-                    ],
-                    "name": "Cut 16_plane_36",
-                    "type": "Feature::Plane",
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5"
-                },
-                {
-                    "normal": [
-                        -0.8660254037844388,
-                        -0.49999999999999983,
-                        0.0
-                    ],
-                    "metadata": {
-                        "featureLevel": "low",
-                        "faceIndex": 39.0,
-                        "originalShape": "Part::Cut",
-                        "bounds": {
-                            "height": 0.5000001999999999,
-                            "width": 0.21650655094611038,
-                            "length": 0.12500019999999967
-                        }
-                    },
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "name": "Cut 16_plane_39",
-                    "type": "Feature::Plane",
-                    "center": [
-                        -2.249999999999999,
-                        3.897114317029974,
-                        0.0
-                    ]
-                },
-                {
-                    "metadata": {
-                        "faceIndex": 40.0,
-                        "originalShape": "Part::Cut",
-                        "bounds": {
-                            "width": 0.1936529259584301,
-                            "height": 0.5000001999999999,
-                            "length": 0.11180565346140448
-                        },
-                        "featureLevel": "low"
-                    },
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "center": [
-                        -1.8169872981077826,
-                        -4.147114317029973,
-                        0.0
-                    ],
-                    "type": "Feature::Plane",
-                    "name": "Cut 16_plane_40",
-                    "normal": [
-                        0.8660254037844384,
-                        -0.5000000000000004,
-                        0.0
-                    ]
-                },
-                {
-                    "name": "Cut 16_plane_41",
-                    "metadata": {
-                        "faceIndex": 41.0,
-                        "featureLevel": "low",
-                        "originalShape": "Part::Cut",
-                        "bounds": {
-                            "length": 0.4330129018922193,
-                            "width": 0.2500001999999997,
-                            "height": 0.5000001999999999
-                        }
-                    },
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "center": [
-                        -2.249999999999999,
-                        3.897114317029974,
-                        0.0
-                    ],
-                    "type": "Feature::Plane",
-                    "normal": [
-                        -0.49999999999999983,
-                        0.8660254037844388,
-                        0.0
-                    ]
-                },
-                {
-                    "metadata": {
-                        "featureLevel": "low",
-                        "originalShape": "Part::Cut",
-                        "bounds": {
-                            "width": 0.25000020000000056,
-                            "height": 0.5000001999999999,
-                            "length": 0.4330129018922191
-                        },
-                        "faceIndex": 42.0
-                    },
-                    "center": [
-                        -2.2500000000000018,
-                        -3.8971143170299727,
-                        0.0
-                    ],
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "type": "Feature::Plane",
-                    "normal": [
-                        -0.5000000000000004,
-                        -0.8660254037844384,
-                        0.0
-                    ],
-                    "name": "Cut 16_plane_42"
-                },
-                {
-                    "type": "Feature::Plane",
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "name": "Cut 16_plane_43",
-                    "normal": [
-                        -0.8660254037844388,
-                        -0.49999999999999983,
-                        0.0
-                    ],
-                    "center": [
-                        -2.6830127018922183,
-                        3.647114317029974,
-                        0.0
-                    ],
-                    "metadata": {
-                        "bounds": {
-                            "length": 0.11180565346139826,
-                            "width": 0.19365292595841943,
-                            "height": 0.5000001999999999
-                        },
-                        "featureLevel": "low",
-                        "originalShape": "Part::Cut",
-                        "faceIndex": 43.0
-                    }
-                },
-                {
-                    "name": "Cut 16_plane_44",
-                    "metadata": {
-                        "originalShape": "Part::Cut",
-                        "faceIndex": 44.0,
-                        "bounds": {
-                            "width": 0.21650655094610993,
-                            "length": 0.12500020000000012,
-                            "height": 0.5000001999999999
-                        },
-                        "featureLevel": "low"
-                    },
-                    "type": "Feature::Plane",
-                    "normal": [
-                        0.8660254037844384,
-                        -0.5000000000000004,
-                        0.0
-                    ],
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "center": [
-                        -2.2500000000000018,
-                        -3.8971143170299727,
-                        0.0
-                    ]
-                },
-                {
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "name": "Cut 16_plane_47",
-                    "metadata": {
-                        "faceIndex": 47.0,
-                        "originalShape": "Part::Cut",
-                        "bounds": {
-                            "width": 0.14694651307311846,
-                            "length": 0.20225444859373676,
-                            "height": 0.5000001999999999
-                        },
-                        "featureLevel": "low"
-                    },
-                    "type": "Feature::Plane",
-                    "normal": [
-                        -0.5877852522924732,
-                        -0.8090169943749475,
-                        0.0
-                    ],
-                    "center": [
-                        -3.640576474687263,
-                        2.6450336353161297,
-                        0.0
-                    ]
-                },
-                {
-                    "type": "Feature::Plane",
-                    "metadata": {
-                        "faceIndex": 48.0,
-                        "originalShape": "Part::Cut",
-                        "bounds": {
-                            "height": 0.5000001999999999,
-                            "length": 0.18090522382813656,
-                            "width": 0.13143539334096443
-                        },
-                        "featureLevel": "low"
-                    },
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "center": [
-                        -3.3466838485410273,
-                        -3.0495421325036025,
-                        0.0
-                    ],
-                    "normal": [
-                        0.5877852522924731,
-                        -0.8090169943749476,
-                        0.0
-                    ],
-                    "name": "Cut 16_plane_48"
-                },
-                {
-                    "center": [
-                        -3.640576474687263,
-                        2.6450336353161297,
-                        0.0
-                    ],
-                    "type": "Feature::Plane",
-                    "metadata": {
-                        "featureLevel": "low",
-                        "faceIndex": 49.0,
-                        "originalShape": "Part::Cut",
-                        "bounds": {
-                            "length": 0.29389282614623635,
-                            "height": 0.5000001999999999,
-                            "width": 0.4045086971874734
-                        }
-                    },
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "name": "Cut 16_plane_49",
-                    "normal": [
-                        -0.8090169943749475,
-                        0.5877852522924732,
-                        0.0
-                    ]
-                },
-                {
-                    "name": "Cut 16_plane_50",
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "metadata": {
-                        "bounds": {
-                            "width": 0.4045086971874734,
-                            "length": 0.29389282614623635,
-                            "height": 0.5000001999999999
-                        },
-                        "faceIndex": 50.0,
-                        "originalShape": "Part::Cut",
-                        "featureLevel": "low"
-                    },
-                    "type": "Feature::Plane",
-                    "center": [
-                        -3.640576474687264,
-                        -2.645033635316129,
-                        0.0
-                    ],
-                    "normal": [
-                        -0.8090169943749476,
-                        -0.5877852522924731,
-                        0.0
-                    ]
-                },
-                {
-                    "name": "Cut 16_plane_51",
-                    "type": "Feature::Plane",
-                    "normal": [
-                        -0.5877852522924732,
-                        -0.8090169943749475,
-                        0.0
-                    ],
-                    "center": [
-                        -3.9344691008334998,
-                        2.240525138128656,
-                        0.0
-                    ],
-                    "metadata": {
-                        "faceIndex": 51.0,
-                        "bounds": {
-                            "length": 0.180905223828137,
-                            "width": 0.131435393340964,
-                            "height": 0.5000001999999999
-                        },
-                        "originalShape": "Part::Cut",
-                        "featureLevel": "low"
-                    },
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5"
-                },
-                {
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "normal": [
-                        0.5877852522924731,
-                        -0.8090169943749476,
-                        0.0
-                    ],
-                    "center": [
-                        -3.640576474687264,
-                        -2.645033635316129,
-                        0.0
-                    ],
-                    "metadata": {
-                        "featureLevel": "low",
-                        "originalShape": "Part::Cut",
-                        "faceIndex": 52.0,
-                        "bounds": {
-                            "height": 0.5000001999999999,
-                            "width": 0.14694651307311846,
-                            "length": 0.20225444859373676
-                        }
-                    },
-                    "name": "Cut 16_plane_52",
-                    "type": "Feature::Plane"
-                },
-                {
-                    "type": "Feature::Plane",
-                    "center": [
-                        -4.401664203302125,
-                        0.9356026086799187,
-                        0.0
-                    ],
-                    "name": "Cut 16_plane_55",
-                    "normal": [
-                        -0.20791169081775973,
-                        -0.9781476007338057,
-                        0.0
-                    ],
-                    "metadata": {
-                        "faceIndex": 55.0,
-                        "originalShape": "Part::Cut",
-                        "bounds": {
-                            "height": 0.5000001999999999,
-                            "width": 0.05197812270444013,
-                            "length": 0.24453710018345287
-                        },
-                        "featureLevel": "low"
-                    },
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5"
-                },
-                {
-                    "normal": [
-                        0.2079116908177595,
-                        -0.9781476007338057,
-                        0.0
-                    ],
-                    "metadata": {
-                        "originalShape": "Part::Cut",
-                        "featureLevel": "low",
-                        "faceIndex": 56.0,
-                        "bounds": {
-                            "length": 0.21872467210444402,
-                            "height": 0.5000001999999999,
-                            "width": 0.04649152174361171
-                        }
-                    },
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "name": "Cut 16_plane_56",
-                    "type": "Feature::Plane",
-                    "center": [
-                        -4.297708357893246,
-                        -1.4246764090468187,
-                        0.0
-                    ]
-                },
-                {
-                    "center": [
-                        -4.401664203302125,
-                        0.9356026086799187,
-                        0.0
-                    ],
-                    "metadata": {
-                        "bounds": {
-                            "length": 0.10395604540888037,
-                            "width": 0.4890740003669028,
-                            "height": 0.5000001999999999
-                        },
-                        "originalShape": "Part::Cut",
-                        "faceIndex": 57.0,
-                        "featureLevel": "low"
-                    },
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "type": "Feature::Plane",
-                    "name": "Cut 16_plane_57",
-                    "normal": [
-                        -0.9781476007338057,
-                        0.20791169081775973,
-                        0.0
-                    ]
-                },
-                {
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "center": [
-                        -4.401664203302126,
-                        -0.9356026086799158,
-                        0.0
-                    ],
-                    "normal": [
-                        -0.9781476007338057,
-                        -0.2079116908177595,
-                        0.0
-                    ],
-                    "metadata": {
-                        "bounds": {
-                            "height": 0.5000001999999999,
-                            "width": 0.48907400036690285,
-                            "length": 0.10395604540888037
-                        },
-                        "originalShape": "Part::Cut",
-                        "featureLevel": "low",
-                        "faceIndex": 58.0
-                    },
-                    "name": "Cut 16_plane_58",
-                    "type": "Feature::Plane"
-                },
-                {
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "normal": [
-                        -0.20791169081775973,
-                        -0.9781476007338057,
-                        0.0
-                    ],
-                    "name": "Cut 16_plane_59",
-                    "center": [
-                        -4.5056200487110045,
-                        0.4465288083130159,
-                        0.0
-                    ],
-                    "type": "Feature::Plane",
-                    "metadata": {
-                        "originalShape": "Part::Cut",
-                        "featureLevel": "low",
-                        "bounds": {
-                            "height": 0.5000001999999999,
-                            "length": 0.21872467210445112,
-                            "width": 0.04649152174361271
-                        },
-                        "faceIndex": 59.0
-                    }
-                },
-                {
-                    "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
-                    "name": "Cut 16_plane_60",
-                    "type": "Feature::Plane",
-                    "center": [
-                        -4.401664203302126,
-                        -0.9356026086799158,
-                        0.0
-                    ],
-                    "normal": [
-                        0.2079116908177595,
-                        -0.9781476007338057,
-                        0.0
-                    ],
-                    "metadata": {
-                        "faceIndex": 60.0,
-                        "bounds": {
-                            "height": 0.5000001999999999,
-                            "length": 0.24453710018345198,
-                            "width": 0.0519781227044398
-                        },
-                        "originalShape": "Part::Cut",
-                        "featureLevel": "low"
-                    }
-                }
-            ],
-            "name": "Cut 16"
+            "faceIndex": 27.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_27",
+          "normal": [
+            -0.9510565162951536,
+            0.3090169943749475,
+            0.0
+          ],
+          "type": "Feature::Plane"
+        },
+        {
+          "center": [
+            1.3905764746872626,
+            -4.279754323328191,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.07725444859373698,
+              "width": 0.23776432907378897
+            },
+            "faceIndex": 28.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_28",
+          "normal": [
+            0.9510565162951536,
+            0.30901699437494723,
+            0.0
+          ],
+          "type": "Feature::Plane"
+        },
+        {
+          "center": [
+            -0.47037808470444,
+            4.47534852915723,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.026132315816913387,
+              "width": 0.24863067384206872
+            },
+            "faceIndex": 31.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_31",
+          "normal": [
+            -0.9945218953682734,
+            -0.10452846326765354,
+            0.0
+          ],
+          "type": "Feature::Plane"
+        },
+        {
+          "center": [
+            0.026882862979692668,
+            -4.527612760791056,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.023373904470526168,
+              "width": 0.22238614297787862
+            },
+            "faceIndex": 32.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_32",
+          "normal": [
+            0.9945218953682734,
+            -0.1045284632676533,
+            0.0
+          ],
+          "type": "Feature::Plane"
+        },
+        {
+          "center": [
+            -0.47037808470444,
+            4.47534852915723,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.4972611476841366,
+              "width": 0.052264431633827435
+            },
+            "faceIndex": 33.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_33",
+          "normal": [
+            -0.10452846326765354,
+            0.9945218953682734,
+            0.0
+          ],
+          "type": "Feature::Plane"
+        },
+        {
+          "center": [
+            -0.47037808470444403,
+            -4.4753485291572295,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.4972611476841367,
+              "width": 0.052264431633827435
+            },
+            "faceIndex": 34.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_34",
+          "normal": [
+            -0.1045284632676533,
+            -0.9945218953682734,
+            0.0
+          ],
+          "type": "Feature::Plane"
+        },
+        {
+          "center": [
+            -0.9676390323885766,
+            4.4230842975234035,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.023373904470526452,
+              "width": 0.22238614297788128
+            },
+            "faceIndex": 35.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_35",
+          "normal": [
+            -0.9945218953682734,
+            -0.10452846326765354,
+            0.0
+          ],
+          "type": "Feature::Plane"
+        },
+        {
+          "center": [
+            -0.47037808470444403,
+            -4.4753485291572295,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.026132315816913387,
+              "width": 0.2486306738420696
+            },
+            "faceIndex": 36.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_36",
+          "normal": [
+            0.9945218953682734,
+            -0.1045284632676533,
+            0.0
+          ],
+          "type": "Feature::Plane"
+        },
+        {
+          "center": [
+            -2.249999999999999,
+            3.897114317029974,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.12500019999999967,
+              "width": 0.21650655094611038
+            },
+            "faceIndex": 39.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_39",
+          "normal": [
+            -0.8660254037844388,
+            -0.49999999999999983,
+            0.0
+          ],
+          "type": "Feature::Plane"
+        },
+        {
+          "center": [
+            -1.8169872981077826,
+            -4.147114317029973,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.11180565346140448,
+              "width": 0.1936529259584301
+            },
+            "faceIndex": 40.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_40",
+          "normal": [
+            0.8660254037844384,
+            -0.5000000000000004,
+            0.0
+          ],
+          "type": "Feature::Plane"
+        },
+        {
+          "center": [
+            -2.249999999999999,
+            3.897114317029974,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.4330129018922193,
+              "width": 0.2500001999999997
+            },
+            "faceIndex": 41.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_41",
+          "normal": [
+            -0.49999999999999983,
+            0.8660254037844388,
+            0.0
+          ],
+          "type": "Feature::Plane"
+        },
+        {
+          "center": [
+            -2.2500000000000018,
+            -3.8971143170299727,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.4330129018922191,
+              "width": 0.25000020000000056
+            },
+            "faceIndex": 42.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_42",
+          "normal": [
+            -0.5000000000000004,
+            -0.8660254037844384,
+            0.0
+          ],
+          "type": "Feature::Plane"
+        },
+        {
+          "center": [
+            -2.6830127018922183,
+            3.647114317029974,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.11180565346139826,
+              "width": 0.19365292595841943
+            },
+            "faceIndex": 43.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_43",
+          "normal": [
+            -0.8660254037844388,
+            -0.49999999999999983,
+            0.0
+          ],
+          "type": "Feature::Plane"
+        },
+        {
+          "center": [
+            -2.2500000000000018,
+            -3.8971143170299727,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.12500020000000012,
+              "width": 0.21650655094610993
+            },
+            "faceIndex": 44.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_44",
+          "normal": [
+            0.8660254037844384,
+            -0.5000000000000004,
+            0.0
+          ],
+          "type": "Feature::Plane"
+        },
+        {
+          "center": [
+            -3.640576474687263,
+            2.6450336353161297,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.20225444859373676,
+              "width": 0.14694651307311846
+            },
+            "faceIndex": 47.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_47",
+          "normal": [
+            -0.5877852522924732,
+            -0.8090169943749475,
+            0.0
+          ],
+          "type": "Feature::Plane"
+        },
+        {
+          "center": [
+            -3.3466838485410273,
+            -3.0495421325036025,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.18090522382813656,
+              "width": 0.13143539334096443
+            },
+            "faceIndex": 48.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_48",
+          "normal": [
+            0.5877852522924731,
+            -0.8090169943749476,
+            0.0
+          ],
+          "type": "Feature::Plane"
+        },
+        {
+          "center": [
+            -3.640576474687263,
+            2.6450336353161297,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.29389282614623635,
+              "width": 0.4045086971874734
+            },
+            "faceIndex": 49.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_49",
+          "normal": [
+            -0.8090169943749475,
+            0.5877852522924732,
+            0.0
+          ],
+          "type": "Feature::Plane"
+        },
+        {
+          "center": [
+            -3.640576474687264,
+            -2.645033635316129,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.29389282614623635,
+              "width": 0.4045086971874734
+            },
+            "faceIndex": 50.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_50",
+          "normal": [
+            -0.8090169943749476,
+            -0.5877852522924731,
+            0.0
+          ],
+          "type": "Feature::Plane"
+        },
+        {
+          "center": [
+            -3.9344691008334998,
+            2.240525138128656,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.180905223828137,
+              "width": 0.131435393340964
+            },
+            "faceIndex": 51.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_51",
+          "normal": [
+            -0.5877852522924732,
+            -0.8090169943749475,
+            0.0
+          ],
+          "type": "Feature::Plane"
+        },
+        {
+          "center": [
+            -3.640576474687264,
+            -2.645033635316129,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.20225444859373676,
+              "width": 0.14694651307311846
+            },
+            "faceIndex": 52.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_52",
+          "normal": [
+            0.5877852522924731,
+            -0.8090169943749476,
+            0.0
+          ],
+          "type": "Feature::Plane"
+        },
+        {
+          "center": [
+            -4.401664203302125,
+            0.9356026086799187,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.24453710018345287,
+              "width": 0.05197812270444013
+            },
+            "faceIndex": 55.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_55",
+          "normal": [
+            -0.20791169081775973,
+            -0.9781476007338057,
+            0.0
+          ],
+          "type": "Feature::Plane"
+        },
+        {
+          "center": [
+            -4.297708357893246,
+            -1.4246764090468187,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.21872467210444402,
+              "width": 0.04649152174361171
+            },
+            "faceIndex": 56.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_56",
+          "normal": [
+            0.2079116908177595,
+            -0.9781476007338057,
+            0.0
+          ],
+          "type": "Feature::Plane"
+        },
+        {
+          "center": [
+            -4.401664203302125,
+            0.9356026086799187,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.10395604540888037,
+              "width": 0.4890740003669028
+            },
+            "faceIndex": 57.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_57",
+          "normal": [
+            -0.9781476007338057,
+            0.20791169081775973,
+            0.0
+          ],
+          "type": "Feature::Plane"
+        },
+        {
+          "center": [
+            -4.401664203302126,
+            -0.9356026086799158,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.10395604540888037,
+              "width": 0.48907400036690285
+            },
+            "faceIndex": 58.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_58",
+          "normal": [
+            -0.9781476007338057,
+            -0.2079116908177595,
+            0.0
+          ],
+          "type": "Feature::Plane"
+        },
+        {
+          "center": [
+            -4.5056200487110045,
+            0.4465288083130159,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.21872467210445112,
+              "width": 0.04649152174361271
+            },
+            "faceIndex": 59.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_59",
+          "normal": [
+            -0.20791169081775973,
+            -0.9781476007338057,
+            0.0
+          ],
+          "type": "Feature::Plane"
+        },
+        {
+          "center": [
+            -4.401664203302126,
+            -0.9356026086799158,
+            0.0
+          ],
+          "hash": "b107e03404d81e5637a88cdfdd840ec0e26a1d9da93bad66f4b5951320b183e5",
+          "metadata": {
+            "bounds": {
+              "height": 0.5000001999999999,
+              "length": 0.24453710018345198,
+              "width": 0.0519781227044398
+            },
+            "faceIndex": 60.0,
+            "featureLevel": "low",
+            "originalShape": "Part::Cut"
+          },
+          "name": "Cut 16_plane_60",
+          "normal": [
+            0.2079116908177595,
+            -0.9781476007338057,
+            0.0
+          ],
+          "type": "Feature::Plane"
         }
-    ],
-    "options": {},
-    "metadata": {},
-    "outputs": {}
+      ],
+      "metadata": null,
+      "name": "Cut 16",
+      "parameters": {
+        "Base": "Cut 15",
+        "Color": "#808080",
+        "Placement": {
+          "Angle": 0.0,
+          "Axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Refine": false,
+        "Tool": "Cylinder 2"
+      },
+      "shape": "Part::Cut",
+      "visible": true
+    }
+  ],
+  "options": {},
+  "outputs": {},
+  "schemaVersion": "3.0.0"
 }

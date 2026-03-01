@@ -8,21 +8,11 @@
 /**
  * Unified geometric feature definition for assembly constraints (compatible with DTEditor Assembly Schema)
  */
-export interface IAssemblyFeature {
+export interface IGeometryFeature {
   /**
    * Feature type for assembly constraints
    */
-  type:
-    | "Feature::Cylinder"
-    | "Feature::Sphere"
-    | "Feature::Cone"
-    | "Feature::Torus"
-    | "Feature::Circle"
-    | "Feature::Arc"
-    | "Feature::Face"
-    | "Feature::Plane"
-    | "Feature::Point"
-    | "Feature::Edge";
+  type: "Feature::Circle" | "Feature::Arc" | "Feature::Face" | "Feature::Plane" | "Feature::Point" | "Feature::Edge";
   /**
    * Feature name/identifier
    */

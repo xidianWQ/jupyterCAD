@@ -3108,7 +3108,7 @@
       "visible": false
     },
     {
-      "assemblyFeatures": [
+      "geometryFeatures": [
         {
           "center": [
             15.0,

@@ -1,7 +1,104 @@
 {
+  "Part::GeomCircle": {
+    "type": "object",
+    "required": [
+      "TypeId",
+      "CenterX",
+      "CenterY",
+      "CenterZ",
+      "NormalX",
+      "NormalY",
+      "NormalZ",
+      "AngleXU",
+      "Radius"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "TypeId": {
+        "const": "Part::GeomCircle",
+        "description": "Geometry type"
+      },
+      "CenterX": {
+        "type": "number",
+        "description": "CenterX"
+      },
+      "CenterY": {
+        "type": "number",
+        "description": "CenterY"
+      },
+      "CenterZ": {
+        "type": "number",
+        "description": "CenterZ"
+      },
+      "NormalX": {
+        "type": "number",
+        "description": "NormalX"
+      },
+      "NormalY": {
+        "type": "number",
+        "description": "NormalY"
+      },
+      "NormalZ": {
+        "type": "number",
+        "description": "NormalZ"
+      },
+      "AngleXU": {
+        "type": "number",
+        "description": "AngleXU"
+      },
+      "Radius": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "description": "Radius"
+      }
+    }
+  },
+  "Part::GeomLineSegment": {
+    "type": "object",
+    "required": [
+      "TypeId",
+      "StartX",
+      "StartY",
+      "StartZ",
+      "EndX",
+      "EndY",
+      "EndZ"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "TypeId": {
+        "const": "Part::GeomLineSegment",
+        "description": "Geometry type"
+      },
+      "StartX": {
+        "type": "number",
+        "description": "StartX"
+      },
+      "StartY": {
+        "type": "number",
+        "description": "StartY"
+      },
+      "StartZ": {
+        "type": "number",
+        "description": "StartZ"
+      },
+      "EndX": {
+        "type": "number",
+        "description": "EndX"
+      },
+      "EndY": {
+        "type": "number",
+        "description": "EndY"
+      },
+      "EndZ": {
+        "type": "number",
+        "description": "EndZ"
+      }
+    }
+  },
   "Unified geometric feature definition for assembly constraints (compatible with DTEditor Assembly Schema)": {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://jupytercad.org/schemas/assemblyFeature.json",
+    "$id": "https://jupytercad.org/schemas/geometryFeature.json",
     "type": "object",
     "required": [
       "type",
@@ -12,10 +109,6 @@
       "type": {
         "type": "string",
         "enum": [
-          "Feature::Cylinder",
-          "Feature::Sphere",
-          "Feature::Cone",
-          "Feature::Torus",
           "Feature::Circle",
           "Feature::Arc",
           "Feature::Face",
@@ -123,103 +216,6 @@
         "type": "object",
         "description": "Additional feature metadata (e.g., surfaceFinish, tolerance, fit, material)",
         "additionalProperties": true
-      }
-    }
-  },
-  "Part::GeomCircle": {
-    "type": "object",
-    "required": [
-      "TypeId",
-      "CenterX",
-      "CenterY",
-      "CenterZ",
-      "NormalX",
-      "NormalY",
-      "NormalZ",
-      "AngleXU",
-      "Radius"
-    ],
-    "additionalProperties": false,
-    "properties": {
-      "TypeId": {
-        "const": "Part::GeomCircle",
-        "description": "Geometry type"
-      },
-      "CenterX": {
-        "type": "number",
-        "description": "CenterX"
-      },
-      "CenterY": {
-        "type": "number",
-        "description": "CenterY"
-      },
-      "CenterZ": {
-        "type": "number",
-        "description": "CenterZ"
-      },
-      "NormalX": {
-        "type": "number",
-        "description": "NormalX"
-      },
-      "NormalY": {
-        "type": "number",
-        "description": "NormalY"
-      },
-      "NormalZ": {
-        "type": "number",
-        "description": "NormalZ"
-      },
-      "AngleXU": {
-        "type": "number",
-        "description": "AngleXU"
-      },
-      "Radius": {
-        "type": "number",
-        "exclusiveMinimum": 0,
-        "description": "Radius"
-      }
-    }
-  },
-  "Part::GeomLineSegment": {
-    "type": "object",
-    "required": [
-      "TypeId",
-      "StartX",
-      "StartY",
-      "StartZ",
-      "EndX",
-      "EndY",
-      "EndZ"
-    ],
-    "additionalProperties": false,
-    "properties": {
-      "TypeId": {
-        "const": "Part::GeomLineSegment",
-        "description": "Geometry type"
-      },
-      "StartX": {
-        "type": "number",
-        "description": "StartX"
-      },
-      "StartY": {
-        "type": "number",
-        "description": "StartY"
-      },
-      "StartZ": {
-        "type": "number",
-        "description": "StartZ"
-      },
-      "EndX": {
-        "type": "number",
-        "description": "EndX"
-      },
-      "EndY": {
-        "type": "number",
-        "description": "EndY"
-      },
-      "EndZ": {
-        "type": "number",
-        "description": "EndZ"
       }
     }
   },
@@ -331,33 +327,34 @@
       }
     }
   },
-  "Part::Cut": {
+  "Part::Box": {
     "type": "object",
     "required": [
-      "Base",
-      "Tool",
-      "Refine",
+      "Length",
+      "Width",
+      "Height",
       "Placement"
     ],
     "additionalProperties": false,
     "properties": {
-      "Base": {
-        "type": "string",
-        "description": "The base of the cut operator",
-        "fcType": "App::PropertyLink"
+      "Length": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "description": "The length of the box (dX)"
       },
-      "Tool": {
-        "type": "string",
-        "description": "The tool of the cut operator",
-        "fcType": "App::PropertyLink"
+      "Width": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "description": "The width of the box (dY)"
       },
-      "Refine": {
-        "type": "boolean",
-        "description": "Refine shape"
+      "Height": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "description": "The height of the box (dZ)"
       },
       "Color": {
         "type": "string",
-        "description": "The color of the cut object",
+        "description": "The color of the box",
         "default": "#808080"
       },
       "Placement": {
@@ -466,68 +463,6 @@
       }
     }
   },
-  "Part::Box": {
-    "type": "object",
-    "required": [
-      "Length",
-      "Width",
-      "Height",
-      "Placement"
-    ],
-    "additionalProperties": false,
-    "properties": {
-      "Length": {
-        "type": "number",
-        "exclusiveMinimum": 0,
-        "description": "The length of the box (dX)"
-      },
-      "Width": {
-        "type": "number",
-        "exclusiveMinimum": 0,
-        "description": "The width of the box (dY)"
-      },
-      "Height": {
-        "type": "number",
-        "exclusiveMinimum": 0,
-        "description": "The height of the box (dZ)"
-      },
-      "Color": {
-        "type": "string",
-        "description": "The color of the box",
-        "default": "#808080"
-      },
-      "Placement": {
-        "type": "object",
-        "description": "Placement of the object",
-        "additionalProperties": false,
-        "required": [
-          "Position",
-          "Axis",
-          "Angle"
-        ],
-        "properties": {
-          "Position": {
-            "type": "array",
-            "description": "Position",
-            "items": {
-              "type": "number"
-            }
-          },
-          "Axis": {
-            "type": "array",
-            "description": "Rotation Axis",
-            "items": {
-              "type": "number"
-            }
-          },
-          "Angle": {
-            "type": "number",
-            "description": "Rotation Angle (degrees)"
-          }
-        }
-      }
-    }
-  },
   "Part::Cone": {
     "type": "object",
     "required": [
@@ -596,45 +531,95 @@
       }
     }
   },
-  "Part::Extrusion": {
+  "Part::Cut": {
     "type": "object",
     "required": [
       "Base",
-      "Dir",
-      "LengthFwd",
-      "LengthRev",
-      "Solid",
+      "Tool",
+      "Refine",
       "Placement"
     ],
     "additionalProperties": false,
     "properties": {
       "Base": {
         "type": "string",
-        "description": "Shape to extrude",
+        "description": "The base of the cut operator",
         "fcType": "App::PropertyLink"
       },
-      "Dir": {
-        "type": "array",
-        "description": "Direction of extrusion",
-        "items": {
-          "type": "number"
-        }
+      "Tool": {
+        "type": "string",
+        "description": "The tool of the cut operator",
+        "fcType": "App::PropertyLink"
       },
-      "LengthFwd": {
-        "type": "number",
-        "description": "Length of extrusion along the direction"
-      },
-      "LengthRev": {
-        "type": "number",
-        "description": "Length of extrusion against the direction"
-      },
-      "Solid": {
+      "Refine": {
         "type": "boolean",
-        "description": "If true, creating a solid"
+        "description": "Refine shape"
       },
       "Color": {
         "type": "string",
-        "description": "The color of the extrusion",
+        "description": "The color of the cut object",
+        "default": "#808080"
+      },
+      "Placement": {
+        "type": "object",
+        "description": "Placement of the object",
+        "additionalProperties": false,
+        "required": [
+          "Position",
+          "Axis",
+          "Angle"
+        ],
+        "properties": {
+          "Position": {
+            "type": "array",
+            "description": "Position",
+            "items": {
+              "type": "number"
+            }
+          },
+          "Axis": {
+            "type": "array",
+            "description": "Rotation Axis",
+            "items": {
+              "type": "number"
+            }
+          },
+          "Angle": {
+            "type": "number",
+            "description": "Rotation Angle (degrees)"
+          }
+        }
+      }
+    }
+  },
+  "Part::Cylinder": {
+    "type": "object",
+    "required": [
+      "Radius",
+      "Angle",
+      "Height",
+      "Placement"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "Radius": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "description": "Radius of the cylinder"
+      },
+      "Height": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "description": "Height of the cylinder"
+      },
+      "Angle": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "description": "Angle of the cylinder"
+      },
+      "Color": {
+        "type": "string",
+        "description": "The color of the cylinder",
         "default": "#808080"
       },
       "Placement": {
@@ -709,6 +694,79 @@
       "Color": {
         "type": "string",
         "description": "The color of the fillet",
+        "default": "#808080"
+      },
+      "Placement": {
+        "type": "object",
+        "description": "Placement of the object",
+        "additionalProperties": false,
+        "required": [
+          "Position",
+          "Axis",
+          "Angle"
+        ],
+        "properties": {
+          "Position": {
+            "type": "array",
+            "description": "Position",
+            "items": {
+              "type": "number"
+            }
+          },
+          "Axis": {
+            "type": "array",
+            "description": "Rotation Axis",
+            "items": {
+              "type": "number"
+            }
+          },
+          "Angle": {
+            "type": "number",
+            "description": "Rotation Angle (degrees)"
+          }
+        }
+      }
+    }
+  },
+  "Part::Extrusion": {
+    "type": "object",
+    "required": [
+      "Base",
+      "Dir",
+      "LengthFwd",
+      "LengthRev",
+      "Solid",
+      "Placement"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "Base": {
+        "type": "string",
+        "description": "Shape to extrude",
+        "fcType": "App::PropertyLink"
+      },
+      "Dir": {
+        "type": "array",
+        "description": "Direction of extrusion",
+        "items": {
+          "type": "number"
+        }
+      },
+      "LengthFwd": {
+        "type": "number",
+        "description": "Length of extrusion along the direction"
+      },
+      "LengthRev": {
+        "type": "number",
+        "description": "Length of extrusion against the direction"
+      },
+      "Solid": {
+        "type": "boolean",
+        "description": "If true, creating a solid"
+      },
+      "Color": {
+        "type": "string",
+        "description": "The color of the extrusion",
         "default": "#808080"
       },
       "Placement": {
@@ -825,68 +883,6 @@
       "Color": {
         "type": "string",
         "description": "The color of the intersection",
-        "default": "#808080"
-      },
-      "Placement": {
-        "type": "object",
-        "description": "Placement of the object",
-        "additionalProperties": false,
-        "required": [
-          "Position",
-          "Axis",
-          "Angle"
-        ],
-        "properties": {
-          "Position": {
-            "type": "array",
-            "description": "Position",
-            "items": {
-              "type": "number"
-            }
-          },
-          "Axis": {
-            "type": "array",
-            "description": "Rotation Axis",
-            "items": {
-              "type": "number"
-            }
-          },
-          "Angle": {
-            "type": "number",
-            "description": "Rotation Angle (degrees)"
-          }
-        }
-      }
-    }
-  },
-  "Part::Cylinder": {
-    "type": "object",
-    "required": [
-      "Radius",
-      "Angle",
-      "Height",
-      "Placement"
-    ],
-    "additionalProperties": false,
-    "properties": {
-      "Radius": {
-        "type": "number",
-        "exclusiveMinimum": 0,
-        "description": "Radius of the cylinder"
-      },
-      "Height": {
-        "type": "number",
-        "exclusiveMinimum": 0,
-        "description": "Height of the cylinder"
-      },
-      "Angle": {
-        "type": "number",
-        "exclusiveMinimum": 0,
-        "description": "Angle of the cylinder"
-      },
-      "Color": {
-        "type": "string",
-        "description": "The color of the cylinder",
         "default": "#808080"
       },
       "Placement": {
