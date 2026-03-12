@@ -592,6 +592,79 @@
       }
     }
   },
+  "Part::Extrusion": {
+    "type": "object",
+    "required": [
+      "Base",
+      "Dir",
+      "LengthFwd",
+      "LengthRev",
+      "Solid",
+      "Placement"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "Base": {
+        "type": "string",
+        "description": "Shape to extrude",
+        "fcType": "App::PropertyLink"
+      },
+      "Dir": {
+        "type": "array",
+        "description": "Direction of extrusion",
+        "items": {
+          "type": "number"
+        }
+      },
+      "LengthFwd": {
+        "type": "number",
+        "description": "Length of extrusion along the direction"
+      },
+      "LengthRev": {
+        "type": "number",
+        "description": "Length of extrusion against the direction"
+      },
+      "Solid": {
+        "type": "boolean",
+        "description": "If true, creating a solid"
+      },
+      "Color": {
+        "type": "string",
+        "description": "The color of the extrusion",
+        "default": "#808080"
+      },
+      "Placement": {
+        "type": "object",
+        "description": "Placement of the object",
+        "additionalProperties": false,
+        "required": [
+          "Position",
+          "Axis",
+          "Angle"
+        ],
+        "properties": {
+          "Position": {
+            "type": "array",
+            "description": "Position",
+            "items": {
+              "type": "number"
+            }
+          },
+          "Axis": {
+            "type": "array",
+            "description": "Rotation Axis",
+            "items": {
+              "type": "number"
+            }
+          },
+          "Angle": {
+            "type": "number",
+            "description": "Rotation Angle (degrees)"
+          }
+        }
+      }
+    }
+  },
   "Part::Cylinder": {
     "type": "object",
     "required": [
@@ -694,79 +767,6 @@
       "Color": {
         "type": "string",
         "description": "The color of the fillet",
-        "default": "#808080"
-      },
-      "Placement": {
-        "type": "object",
-        "description": "Placement of the object",
-        "additionalProperties": false,
-        "required": [
-          "Position",
-          "Axis",
-          "Angle"
-        ],
-        "properties": {
-          "Position": {
-            "type": "array",
-            "description": "Position",
-            "items": {
-              "type": "number"
-            }
-          },
-          "Axis": {
-            "type": "array",
-            "description": "Rotation Axis",
-            "items": {
-              "type": "number"
-            }
-          },
-          "Angle": {
-            "type": "number",
-            "description": "Rotation Angle (degrees)"
-          }
-        }
-      }
-    }
-  },
-  "Part::Extrusion": {
-    "type": "object",
-    "required": [
-      "Base",
-      "Dir",
-      "LengthFwd",
-      "LengthRev",
-      "Solid",
-      "Placement"
-    ],
-    "additionalProperties": false,
-    "properties": {
-      "Base": {
-        "type": "string",
-        "description": "Shape to extrude",
-        "fcType": "App::PropertyLink"
-      },
-      "Dir": {
-        "type": "array",
-        "description": "Direction of extrusion",
-        "items": {
-          "type": "number"
-        }
-      },
-      "LengthFwd": {
-        "type": "number",
-        "description": "Length of extrusion along the direction"
-      },
-      "LengthRev": {
-        "type": "number",
-        "description": "Length of extrusion against the direction"
-      },
-      "Solid": {
-        "type": "boolean",
-        "description": "If true, creating a solid"
-      },
-      "Color": {
-        "type": "string",
-        "description": "The color of the extrusion",
         "default": "#808080"
       },
       "Placement": {
