@@ -592,6 +592,68 @@
       }
     }
   },
+  "Part::Cylinder": {
+    "type": "object",
+    "required": [
+      "Radius",
+      "Angle",
+      "Height",
+      "Placement"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "Radius": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "description": "Radius of the cylinder"
+      },
+      "Height": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "description": "Height of the cylinder"
+      },
+      "Angle": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "description": "Angle of the cylinder"
+      },
+      "Color": {
+        "type": "string",
+        "description": "The color of the cylinder",
+        "default": "#808080"
+      },
+      "Placement": {
+        "type": "object",
+        "description": "Placement of the object",
+        "additionalProperties": false,
+        "required": [
+          "Position",
+          "Axis",
+          "Angle"
+        ],
+        "properties": {
+          "Position": {
+            "type": "array",
+            "description": "Position",
+            "items": {
+              "type": "number"
+            }
+          },
+          "Axis": {
+            "type": "array",
+            "description": "Rotation Axis",
+            "items": {
+              "type": "number"
+            }
+          },
+          "Angle": {
+            "type": "number",
+            "description": "Rotation Angle (degrees)"
+          }
+        }
+      }
+    }
+  },
   "Part::Extrusion": {
     "type": "object",
     "required": [
@@ -631,68 +693,6 @@
       "Color": {
         "type": "string",
         "description": "The color of the extrusion",
-        "default": "#808080"
-      },
-      "Placement": {
-        "type": "object",
-        "description": "Placement of the object",
-        "additionalProperties": false,
-        "required": [
-          "Position",
-          "Axis",
-          "Angle"
-        ],
-        "properties": {
-          "Position": {
-            "type": "array",
-            "description": "Position",
-            "items": {
-              "type": "number"
-            }
-          },
-          "Axis": {
-            "type": "array",
-            "description": "Rotation Axis",
-            "items": {
-              "type": "number"
-            }
-          },
-          "Angle": {
-            "type": "number",
-            "description": "Rotation Angle (degrees)"
-          }
-        }
-      }
-    }
-  },
-  "Part::Cylinder": {
-    "type": "object",
-    "required": [
-      "Radius",
-      "Angle",
-      "Height",
-      "Placement"
-    ],
-    "additionalProperties": false,
-    "properties": {
-      "Radius": {
-        "type": "number",
-        "exclusiveMinimum": 0,
-        "description": "Radius of the cylinder"
-      },
-      "Height": {
-        "type": "number",
-        "exclusiveMinimum": 0,
-        "description": "Height of the cylinder"
-      },
-      "Angle": {
-        "type": "number",
-        "exclusiveMinimum": 0,
-        "description": "Angle of the cylinder"
-      },
-      "Color": {
-        "type": "string",
-        "description": "The color of the cylinder",
         "default": "#808080"
       },
       "Placement": {
@@ -801,7 +801,7 @@
       }
     }
   },
-  "Part::MultiFuse": {
+  "Part::MultiCommon": {
     "type": "object",
     "required": [
       "Shapes",
@@ -812,7 +812,7 @@
     "properties": {
       "Shapes": {
         "type": "array",
-        "description": "The shapes of the individual elements",
+        "description": "The objects to intersect",
         "fcType": "App::PropertyLinkList",
         "items": {
           "type": "string"
@@ -824,7 +824,7 @@
       },
       "Color": {
         "type": "string",
-        "description": "The color of the fused object",
+        "description": "The color of the intersection",
         "default": "#808080"
       },
       "Placement": {
@@ -859,7 +859,7 @@
       }
     }
   },
-  "Part::MultiCommon": {
+  "Part::MultiFuse": {
     "type": "object",
     "required": [
       "Shapes",
@@ -870,7 +870,7 @@
     "properties": {
       "Shapes": {
         "type": "array",
-        "description": "The objects to intersect",
+        "description": "The shapes of the individual elements",
         "fcType": "App::PropertyLinkList",
         "items": {
           "type": "string"
@@ -882,7 +882,7 @@
       },
       "Color": {
         "type": "string",
-        "description": "The color of the intersection",
+        "description": "The color of the fused object",
         "default": "#808080"
       },
       "Placement": {

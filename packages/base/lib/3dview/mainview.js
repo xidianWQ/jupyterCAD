@@ -1428,10 +1428,10 @@ export class MainView extends React.Component {
                     this._renderer.getSize(originalSize);
                     const scaleFactor = 2;
                     this._renderer.setSize(originalSize.x * scaleFactor, originalSize.y * scaleFactor, false);
-                    
                     // 截取缩略图, 强制渲染一次以确保缓冲区有最新的图像
                     // 保存原始背景色并临时设置为 #f0f0f0
-                    const originalClearColor = this._renderer.getClearColor().clone();
+                    const color = new THREE.Color();
+                    const originalClearColor = this._renderer.getClearColor(color).clone();
                     const originalClearAlpha = this._renderer.getClearAlpha();
                     this._renderer.setClearColor(0xf0f0f0);
                     this._renderer.render(this._scene, this._camera);

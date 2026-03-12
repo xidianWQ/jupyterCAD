@@ -1953,17 +1953,21 @@ export class MainView extends React.Component<IProps, IStates> {
             const originalSize = new THREE.Vector2();
             this._renderer.getSize(originalSize);
             const scaleFactor = 2;
-
-            this._renderer.setSize(
-              originalSize.x * scaleFactor, 
-              originalSize.y * scaleFactor, 
-              false
-            );
+            this._renderer.setSize(originalSize.x * scaleFactor, originalSize.y * scaleFactor, false);
             
             // 截取缩略图, 强制渲染一次以确保缓冲区有最新的图像
+            // 保存原始背景色并临时设置为 #f0f0f0
+            const color = new THREE.Color();
+            const originalClearColor = this._renderer.getClearColor(color).clone();
+            const originalClearAlpha = this._renderer.getClearAlpha();
+            this._renderer.setClearColor(0xf0f0f0);
             this._renderer.render(this._scene, this._camera);
-            const thumbnail = this._renderer.domElement.toDataURL('image/png');
 
+            const thumbnail = this._renderer.domElement.toDataURL('image/png');
+            // 恢复原始背景色
+            this._renderer.setClearColor(originalClearColor, originalClearAlpha);
+            this._renderer.setSize(originalSize.x, originalSize.y, false);
+            
             // 释放信号 (用于保存到后端/本地文件系统)
             const filename = `${new Date().getTime()}.glb`;
             this._mainViewModel.emitExportAsGLB(exported, filename, thumbnail);
